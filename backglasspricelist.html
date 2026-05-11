@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFixLabs - Backglass Price List</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN (v3.4 for maximum compatibility) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-black': '#12121A',
+                        'brand-purple': '#8B5CF6',
+                        'brand-green': '#22C55E',
+                        'brand-slate': {
+                            50: '#F8FAFC',
+                            100: '#F1F5F9',
+                            200: '#E2E8F0',
+                            400: '#94A3B8',
+                            500: '#64748B',
+                            800: '#1e293b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F8FAFC;
+        }
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-slate-800 antialiased">
+
+    <!-- Branding Header -->
+    <header class="sticky top-0 z-50 bg-brand-black text-white shadow-lg lg:rounded-b-2xl max-w-7xl mx-auto w-full transition-all">
+        <div class="px-6 py-4 flex items-center justify-between">
+            <a href="/HOME PAGE" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <div class="w-10 h-10 bg-brand-purple rounded-xl flex items-center justify-center border border-white/10 shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+                    <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-xl tracking-tight">iFix<span class="text-brand-purple">Labs</span></h1>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-white/70">
+                <a href="#" class="hover:text-brand-purple transition-colors">Services</a>
+                <a href="#" class="hover:text-brand-purple transition-colors">Reviews</a>
+                <a href="#" class="hover:text-brand-purple transition-colors">Coverage</a>
+            </nav>
+
+            <a 
+                href="https://wa.me/+60176198047" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 bg-brand-green hover:bg-[#16A34A] text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-green-500/20 uppercase"
+            >
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span class="hidden sm:inline">Whatsapp Us!</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+        <!-- Hero Section -->
+        <div class="text-center space-y-4 max-w-4xl mx-auto">
+            <div role="status" aria-label="Repair status">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-purple-200">
+                    <i data-lucide="shield-check" class="w-3 h-3"></i>
+                    Professional Grade Repair
+                </div>
+                <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-black tracking-tighter leading-[0.85]">
+                    Backglass Repair <br />
+                    <span class="text-brand-purple">Price List</span>
+                </h2>
+                <p class="mt-8 text-brand-slate-500 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
+                    Shattered back glass? We restore your device aesthetic using laboratory-standard precision.
+                </p>
+            </div>
+        </div>
+
+        <!-- Search & Stats -->
+        <div class="sticky top-24 z-40 bg-brand-slate-50/80 backdrop-blur-md pt-4 pb-6 border-b border-slate-200">
+           <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
+              <div class="relative w-full sm:max-w-md group">
+                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-slate-400 group-focus-within:text-brand-purple transition-colors"></i>
+                <input 
+                  type="text" 
+                  id="searchInput"
+                  placeholder="Search iPhone model..." 
+                  class="w-full pl-12 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-purple-500/10 focus:border-brand-purple transition-all shadow-sm font-medium"
+                />
+              </div>
+              <div class="flex items-center gap-6 text-sm text-brand-slate-500 font-semibold whitespace-nowrap overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
+                <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-sm border border-brand-slate-100 italic">
+                  <i data-lucide="clock" class="w-4 h-4 text-orange-500"></i>
+                  1 Hour Fix
+                </div>
+              </div>
+           </div>
+        </div>
+
+        <!-- Pricing Grid/Table -->
+        <div class="bg-white rounded-3xl shadow-xl shadow-purple-500/5 border border-brand-slate-100 overflow-hidden">
+            <!-- Table Header -->
+            <div class="grid grid-cols-12 bg-brand-black text-white py-5 px-6 sm:px-8 text-xs font-bold uppercase tracking-widest border-b border-white/5">
+                <div class="col-span-6 sm:col-span-5 flex items-center gap-2">
+                    <i data-lucide="smartphone" class="w-4 h-4 text-brand-purple"></i>
+                    Model
+                </div>
+                <div class="col-span-3 sm:col-span-3 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
+                    No Magnet
+                </div>
+                <div class="col-span-3 sm:col-span-4 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
+                    Magnet
+                </div>
+            </div>
+
+            <!-- Table Body -->
+            <div id="priceTableBody" class="divide-y divide-brand-slate-100">
+                <!-- Rows will be injected here by JS -->
+            </div>
+            
+            <!-- Empty State -->
+            <div id="emptyState" class="hidden py-20 text-center space-y-4">
+                <div class="w-16 h-16 bg-brand-slate-100 rounded-full flex items-center justify-center mx-auto">
+                    <i data-lucide="search" class="w-8 h-8 text-brand-slate-300"></i>
+                </div>
+                <p class="text-brand-slate-500 font-medium italic">No models found matching your search</p>
+                <button 
+                  onclick="document.getElementById('searchInput').value = ''; filterData('');"
+                  class="text-brand-purple font-bold text-sm hover:underline"
+                >
+                  Clear search
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer Notes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 bg-white border border-brand-slate-100 rounded-3xl shadow-sm space-y-3">
+                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
+                    <i data-lucide="info" class="w-5 h-5 text-blue-600"></i>
+                </div>
+                <h4 class="font-bold text-brand-slate-800">OEM Quality</h4>
+                <p class="text-sm text-brand-slate-500 font-medium leading-relaxed">
+                    We use OEM glass that matches the density and color profile of your factory device.
+                </p>
+            </div>
+            <div class="p-6 bg-white border border-brand-slate-100 rounded-3xl shadow-sm space-y-3">
+                <div class="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-green"></i>
+                </div>
+                <h4 class="font-bold text-brand-slate-800">Water Resistance</h4>
+                <p class="text-sm text-brand-slate-500 font-medium leading-relaxed">
+                    New gaskets are applied to ensure your device maintains its water and dust resistance standards.
+                </p>
+            </div>
+            <div class="p-6 bg-white border border-brand-slate-100 rounded-3xl shadow-sm space-y-3">
+                <div class="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center">
+                    <i data-lucide="arrow-left" class="w-5 h-5 text-brand-purple"></i>
+                </div>
+                <h4 class="font-bold text-brand-slate-800">Trade-in Ready</h4>
+                <p class="text-sm text-brand-slate-500 font-medium leading-relaxed">
+                    Repairs are performed with such precision that they pass all major trade-in inspections.
+                </p>
+            </div>
+        </div>
+
+        <footer class="pt-12 pb-6 text-center border-t border-brand-slate-200">
+            <p class="text-xs text-brand-slate-400 font-bold uppercase tracking-widest italic">
+                Prices are subject to change based on part availability and market rates.
+            </p>
+        </footer>
+    </main>
+
+    <!-- Floating Back Button -->
+    <a 
+        href="#" 
+        class="fixed bottom-8 left-8 p-4 bg-white border border-brand-slate-200 rounded-full shadow-2xl hover:bg-brand-slate-50 transition-all group z-50 md:flex hidden"
+    >
+        <i data-lucide="arrow-left" class="w-5 h-5 text-brand-slate-500 group-hover:-translate-x-1 transition-transform"></i>
+    </a>
+
+    <script>
+        const PRICING_DATA = [
+            { model: "iPhone 8", noMagnet: 135, magnet: null },
+            { model: "iPhone 8 Plus", noMagnet: 135, magnet: null },
+            { model: "iPhone X", noMagnet: 135, magnet: null },
+            { model: "iPhone XS Max", noMagnet: 135, magnet: null },
+            { model: "iPhone XR", noMagnet: 135, magnet: null },
+            { model: "iPhone 11", noMagnet: 145, magnet: null },
+            { model: "iPhone 11 Pro", noMagnet: 150, magnet: null },
+            { model: "iPhone 11 Pro Max", noMagnet: 150, magnet: null },
+            { model: "iPhone 12", noMagnet: 155, magnet: null },
+            { model: "iPhone 12 Mini", noMagnet: 155, magnet: null },
+            { model: "iPhone 12 Pro", noMagnet: 160, magnet: null },
+            { model: "iPhone 12 Pro Max", noMagnet: 160, magnet: null },
+            { model: "iPhone 13", noMagnet: 160, magnet: null },
+            { model: "iPhone 13 Mini", noMagnet: 160, magnet: null },
+            { model: "iPhone 13 Pro", noMagnet: 165, magnet: null },
+            { model: "iPhone 13 Pro Max", noMagnet: 165, magnet: null },
+            { model: "iPhone 14", noMagnet: null, magnet: 175, notable: true },
+            { model: "iPhone 14 Plus", noMagnet: null, magnet: 175, notable: true },
+            { model: "iPhone 14 Pro", noMagnet: 165, magnet: null },
+            { model: "iPhone 14 Pro Max", noMagnet: 165, magnet: null },
+            { model: "iPhone 15", noMagnet: null, magnet: 185, notable: true },
+            { model: "iPhone 15 Plus", noMagnet: null, magnet: 185, notable: true },
+            { model: "iPhone 15 Pro", noMagnet: null, magnet: 190, notable: true },
+            { model: "iPhone 15 Pro Max", noMagnet: null, magnet: 190, notable: true },
+            { model: "iPhone 16", noMagnet: null, magnet: 195, notable: true },
+            { model: "iPhone 16 Plus", noMagnet: null, magnet: 195, notable: true },
+            { model: "iPhone 16 Pro", noMagnet: null, magnet: 200, notable: true },
+            { model: "iPhone 16 Pro Max", noMagnet: null, magnet: 200, notable: true },
+            { model: "iPhone 16e", noMagnet: null, magnet: 200, notable: true },
+        ];
+
+        function renderRows(data) {
+            const container = document.getElementById('priceTableBody');
+            const emptyState = document.getElementById('emptyState');
+            
+            container.innerHTML = '';
+            
+            if (data.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            data.forEach((item) => {
+                const row = document.createElement('div');
+                row.className = `grid grid-cols-12 py-5 px-6 sm:px-8 items-center cursor-default transition-colors ${item.notable ? 'bg-purple-50/30' : 'hover:bg-slate-50'}`;
+                
+                row.innerHTML = `
+                    <div class="col-span-6 sm:col-span-5 flex items-center gap-3">
+                        <span class="font-bold text-brand-slate-800 sm:text-lg tracking-tight">${item.model}</span>
+                        ${item.notable ? '<span class="hidden sm:inline-block px-1.5 py-0.5 bg-green-100 text-green-700 text-[9px] font-black uppercase rounded tracking-tighter">MagSafe</span>' : ''}
+                    </div>
+                    
+                    <div class="col-span-3 sm:col-span-3 text-center sm:text-left pl-4 font-mono text-brand-purple">
+                        ${item.noMagnet ? `
+                            <span class="text-lg font-bold tracking-tighter">
+                                <span class="text-sm mr-0.5">RM</span>${item.noMagnet}
+                            </span>
+                        ` : '<span class="text-slate-300 font-medium">-</span>'}
+                    </div>
+
+                    <div class="col-span-3 sm:col-span-4 text-center sm:text-left pl-4 font-mono text-brand-green">
+                        ${item.magnet ? `
+                            <span class="text-lg font-bold tracking-tighter">
+                                <span class="text-sm mr-0.5">RM</span>${item.magnet}
+                            </span>
+                        ` : '<span class="text-slate-300 font-medium">-</span>'}
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function filterData(query) {
+            const filtered = PRICING_DATA.filter(item => 
+                item.model.toLowerCase().includes(query.toLowerCase())
+            );
+            renderRows(filtered);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderRows(PRICING_DATA);
+            lucide.createIcons();
+            
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', (e) => {
+                filterData(e.target.value);
+            });
+        });
+    </script>
+</body>
+</html>
