@@ -115,8 +115,7 @@
 </head> 
 
 <body class="bg-white text-brand-black selection:bg-brand-purple selection:text-white"> 
-
-  
+<body class="bg-white dark:bg-brand-black text-brand-black dark:text-white transition-colors duration-300">
 
     <!-- Navbar --> 
     <nav class="fixed top-0 w-full z-50 px-4 py-6 pointer-events-none"> 
@@ -157,9 +156,9 @@
 
             <div class="flex items-center ml-auto md:ml-0"> 
 
-                <button onclick="toggleDarkMode()" class="p-2 rounded-xl bg-white/10 text-white hover:bg-brand-purple transition-all">
-                    <i data-lucide="sun" id="sun-icon" class="w-4 h-4 hidden"></i>
-                    <i data-lucide="moon" id="moon-icon" class="w-4 h-4"></i>
+                <button onclick="toggleDarkMode()" class="p-2 rounded-xl bg-white/10 text-white hover:bg-brand-purple transition-all hover:scale-110 active:scale-95 mr-6">
+                <i data-lucide="sun" id="sun-icon" class="w-4 h-4 hidden"></i>
+                <i data-lucide="moon" id="moon-icon" class="w-4 h-4"></i>
                 </button>
                 
                 <a  
