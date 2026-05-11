@@ -500,44 +500,49 @@
 
         // Data
         const SERVICES = [
-            {
-                title: "Screen Repair",
-                description: "LCD bleeding, touch issues, or glass cracks. Lab-standard replacement.",
-                icon: "smartphone",
-                tag: "High Quality"
-            },
-            {
-                title: "Battery Swap",
-                description: "Bloated cells or fast draining. High-capacity OEM-grade cells.",
-                icon: "battery",
-                tag: "Quick Fix"
-            },
-            {
-                title: "Backglass",
-                description: "Shattered back glass? We restore your device aesthetic.",
-                icon: "layers",
-                tag: "Pro Finish"
-            },
-            {
-                title: "Charging",
-                description: "Cleaning or port swap. Micro-soldering available on-site.",
-                icon: "zap",
-                tag: "On-Site"
-            },
-            {
-                title: "PC/Desktop",
-                description: "Software fix, hardware upgrades, and full diagnostics.",
-                icon: "monitor",
-                tag: "New"
-            },
-            {
-                title: "Others",
-                description: "Got a weird problem? Use our diagnostic tool.",
-                icon: "help-circle",
-                tag: "AI Assist",
-                link: "#inquiry"
-            }
-        ];
+    {
+        title: "Screen Repair",
+        description: "LCD bleeding, touch issues, or glass cracks. Lab-standard replacement.",
+        icon: "smartphone",
+        tag: "High Quality",
+        link: "https://wa.me/601XXXXXXXXX?text=Hi%20iFixLabs,%20I%20need%20to%20fix%20my%20iPhone%20screen" // Change to your number
+    },
+    {
+        title: "Battery Swap",
+        description: "Bloated cells or fast draining. High-capacity OEM-grade cells.",
+        icon: "battery",
+        tag: "Quick Fix",
+        link: "https://wa.me/601XXXXXXXXX?text=Hi%20iFixLabs,%20my%20battery%20is%20draining%20fast"
+    },
+    {
+        title: "Backglass",
+        description: "Shattered back glass? We restore your device aesthetic.",
+        icon: "layers",
+        tag: "Pro Finish",
+        link: "/backglasspricelist.html" // <--- This points to your new page!
+    },
+    {
+        title: "Charging",
+        description: "Cleaning or port swap. Micro-soldering available on-site.",
+        icon: "zap",
+        tag: "On-Site",
+        link: "https://wa.me/601XXXXXXXXX?text=Hi%20iFixLabs,%20my%20phone%20cannot%20charge"
+    },
+    {
+        title: "PC/Desktop",
+        description: "Software fix, hardware upgrades, and full diagnostics.",
+        icon: "monitor",
+        tag: "New",
+        link: "https://wa.me/601XXXXXXXXX?text=Hi%20iFixLabs,%20my%20PC%20is%20slow"
+    },
+    {
+        title: "Others",
+        description: "Got a weird problem? Use our diagnostic tool.",
+        icon: "help-circle",
+        tag: "AI Assist",
+        link: "#inquiry"
+    }
+];
 
         const REVIEWS = [
             { author: "Zulkhairi A.", content: "Repair screen iPhone 11 Pro siap dalam 30 minit je depan mata. Price pun murah.", platform: "Carousell", date: "1 week ago" },
@@ -551,9 +556,7 @@
         SERVICES.forEach(s => {
             const div = document.createElement('a');
             div.href = s.link || '#';
-            const link = document.createElement('a');
-            link.href = '/backglasspricelist.html'; // This points to your new file
-                link.className = 'group p-4 sm:p-6 rounded-[24px] sm:rounded-[32px] bg-brand-light-purple/30 border border-transparent hover:border-brand-purple transition-all flex flex-col justify-between cursor-pointer';
+             div.className = 'group p-4 sm:p-6 rounded-[24px] sm:rounded-[32px] bg-brand-light-purple/30 border border-transparent hover:border-brand-purple transition-all flex flex-col justify-between';
             div.innerHTML = `
                 <div>
                     <div class="flex justify-between items-start mb-4 sm:mb-6">
