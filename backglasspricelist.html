@@ -56,25 +56,25 @@
 <body class="font-sans text-brand-slate-800 antialiased">
 
     <!-- Branding Header -->
-    <header class="sticky top-0 z-50 bg-brand-black text-white shadow-lg lg:rounded-b-2xl max-w-7xl mx-auto w-full transition-all">
-        <div class="px-6 py-4 flex items-center justify-between">
-            <a href="/index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                <div class="w-10 h-10 bg-brand-purple rounded-xl flex items-center justify-center border border-white/10 shadow-[0_0_20px_rgba(139,92,246,0.3)]">
-                    <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
+      <nav class="fixed top-0 w-full z-50 px-4 py-6 pointer-events-none">
+        <div class="max-w-6xl mx-auto flex justify-between items-center bg-brand-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl px-6 py-3.5 pointer-events-auto">
+            <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" class="flex items-center gap-2 group cursor-pointer hover:opacity-80 transition-opacity">
+                <div class="bg-brand-purple p-1 rounded-lg overflow-hidden">
+                    <img src="/1080.ico" alt="iFixLabs Logo" class="w-5 h-5 object-contain">
                 </div>
-                <div>
-                    <h1 class="font-bold text-xl tracking-tight">iFix<span class="text-brand-purple">Labs</span></h1>
+                <div class="font-display font-black tracking-tighter text-xl flex items-baseline gap-0.5">
+                    <span class="text-white">iFix</span>
+                    <span class="text-brand-purple">Labs</span>
                 </div>
-
             </a>
+            
+            <div class="hidden md:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
+                <a href="#services" class="hover:text-brand-purple transition-colors">Services</a>
+                <a href="#reviews" class="hover:text-brand-purple transition-colors">Reviews</a>
+                <a href="#coverage" class="hover:text-brand-purple transition-colors">Coverage</a>
+            </div>
 
-            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-white/70">
-                <a href="#" class="hover:text-brand-purple transition-colors">Services</a>
-                <a href="#" class="hover:text-brand-purple transition-colors">Reviews</a>
-                <a href="#" class="hover:text-brand-purple transition-colors">Coverage</a>
-            </nav>
-
-    <div class="flex items-center ml-auto md:ml-0">
+            <div class="flex items-center ml-auto md:ml-0">
                 <a 
                     href="https://wa.me/+60176198047" 
                     target="_blank"
@@ -83,9 +83,10 @@
                 >
                     <i data-lucide="message-circle" class="w-4 h-4"></i>
                     <span>WhatsApp Us!</span>
-            </a>
+                </a>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
         <!-- Hero Section -->
