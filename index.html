@@ -26,8 +26,8 @@
 
         tailwind.config = { 
 
-    
-
+            darkMode: 'class',
+            
             theme: { 
 
                 extend: { 
@@ -157,6 +157,11 @@
 
             <div class="flex items-center ml-auto md:ml-0"> 
 
+                <button onclick="toggleDarkMode()" class="p-2 rounded-xl bg-white/10 text-white hover:bg-brand-purple transition-all">
+                    <i data-lucide="sun" id="sun-icon" class="w-4 h-4 hidden"></i>
+                    <i data-lucide="moon" id="moon-icon" class="w-4 h-4"></i>
+                </button>
+                
                 <a  
 
                     href="https://wa.me/+60176198047"  
@@ -1313,24 +1318,51 @@
 
         // Animation Triggers 
 
-        window.addEventListener('DOMContentLoaded', () => { 
+        // 1. Dark Mode Logic
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const isDark = html.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateToggleIcons(isDark);
+        }
 
-            setTimeout(() => { 
+        function updateToggleIcons(isDark) {
+            const sunIcon = document.getElementById('sun-icon');
+            const moonIcon = document.getElementById('moon-icon');
+            if (sunIcon && moonIcon) {
+                sunIcon.classList.toggle('hidden', !isDark);
+                moonIcon.classList.toggle('hidden', isDark);
+            }
+            // Refresh icons so they show up in dark mode
+            lucide.createIcons();
+        }
 
-                document.getElementById('hero-card').classList.remove('opacity-0', 'translate-y-10'); 
+        // 2. Initialization (Combines your animations + year + theme)
+        window.addEventListener('DOMContentLoaded', () => {
+            // Theme check
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                updateToggleIcons(true);
+            } else {
+                updateToggleIcons(false);
+            }
 
-            }, 500); 
+            // Your original Hero Animation
+            setTimeout(() => {
+                const hero = document.getElementById('hero-card');
+                if (hero) hero.classList.remove('opacity-0', 'translate-y-10');
+            }, 500);
 
-            lucide.createIcons(); 
-
-            document.getElementById('year').innerText = new Date().getFullYear(); 
-
-        });     
-
-    </script> 
-
-</body> 
-
-</html> 
-
- 
+            // Wake up all icons (Wrenches, Batteries, etc.)
+            lucide.createIcons();
+            
+            // Set the year in footer
+            const yearEl = document.getElementById('year');
+            if (yearEl) yearEl.innerText = new Date().getFullYear();
+        });
+        
+        // --- FIXED SCRIPT END ---
+    </script>
+</body>
+</html>
