@@ -551,7 +551,9 @@
         SERVICES.forEach(s => {
             const div = document.createElement('a');
             div.href = s.link || '#';
-            div.className = 'group p-4 sm:p-6 rounded-[24px] sm:rounded-[32px] bg-brand-light-purple/30 border border-transparent hover:border-brand-purple transition-all flex flex-col justify-between';
+            const link = document.createElement('a');
+            link.href = '/backglasspricelist.html'; // This points to your new file
+                link.className = 'group p-4 sm:p-6 rounded-[24px] sm:rounded-[32px] bg-brand-light-purple/30 border border-transparent hover:border-brand-purple transition-all flex flex-col justify-between cursor-pointer';
             div.innerHTML = `
                 <div>
                     <div class="flex justify-between items-start mb-4 sm:mb-6">
