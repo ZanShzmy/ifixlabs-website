@@ -23,8 +23,15 @@
         }
     </script>
     <style>
+        
         .backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
         .step-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #7C5DFA; border-radius: 4px; }
+        
     </style>
 </head>
 <body class="bg-white text-brand-black selection:bg-brand-purple selection:text-white">
