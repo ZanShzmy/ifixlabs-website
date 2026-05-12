@@ -647,18 +647,7 @@
             }, 500);
             lucide.createIcons();
             document.getElementById('year').innerText = new Date().getFullYear();
-        }
-
-            window.addEventListener('scroll', () => {
-        // If user scrolls down more than 300px, show the button
-        if (window.scrollY > 300) {
-            backToTop.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-            backToTop.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
-        } else {
-            // If they are at the top, hide it again
-            backToTop.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-            backToTop.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-        }
+        
         });    
     </script>
 </body>
