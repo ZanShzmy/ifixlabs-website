@@ -24,7 +24,16 @@
                             black: '#1A122E', 
                             purple: '#7C5DFA', 
                             'light-purple': '#F3F0FF',
-                            green: '#25D366'
+                            green: '#25D366',
+                            // ADD THIS SECTION BELOW
+                            slate: {
+                                100: '#f1f5f9',
+                                200: '#e2e8f0',
+                                300: '#cbd5e1',
+                                400: '#94a3b8',
+                                500: '#64748b',
+                                800: '#1e293b'
+                            }
                         } 
                     }
                 }
@@ -114,14 +123,18 @@
             </div>
         </div>
 
-            <div class="flex items-center gap-6 text-sm text-brand-slate-500 font-semibold whitespace-nowrap overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
-                <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-sm border border-brand-slate-100 italic">
-                  <i data-lucide="clock" class="w-4 h-4 text-orange-500"></i>
-                  1 Hour Fix
+        <div class="max-w-xl mx-auto space-y-6">
+            <div class="flex justify-center">
+                <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-sm border border-brand-slate-100 italic text-sm text-brand-slate-500 font-semibold">
+                    <i data-lucide="clock" class="w-4 h-4 text-orange-500"></i>
+                    1 Hour Fix
                 </div>
-              </div>
-           </div>
-        </div>
+            </div>
+        </div>    
+
+        <div class="sticky top-[70px] sm:top-[85px] h-6 bg-white z-20 -mb-6"></div>
+        
+        <div class="bg-white rounded-3xl shadow-xl shadow-purple-500/5 border border-brand-slate-100">
 
     <!-- Gap -->
     <div class="sticky top-[70px] sm:top-[85px] h-6 bg-white z-20 -mb-6"></div>
@@ -304,15 +317,32 @@
     }
 
     // Initialize & Filter logic remains same...
-    document.addEventListener('DOMContentLoaded', () => {
-        renderRows(PRICING_DATA);
-        lucide.createIcons();
-        document.getElementById('searchInput').addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            const filtered = PRICING_DATA.filter(item => item.model.toLowerCase().includes(query));
-            renderRows(filtered);
-        });
+   document.addEventListener('DOMContentLoaded', () => {
+    renderRows(PRICING_DATA);
+    lucide.createIcons();
+    
+    // Search Logic
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const filtered = PRICING_DATA.filter(item => item.model.toLowerCase().includes(query));
+        renderRows(filtered);
     });
+
+    // BACK TO TOP LOGIC (This was missing/broken)
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            backToTop.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+        } else {
+            backToTop.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
 </script>
 </body>
 </html>
