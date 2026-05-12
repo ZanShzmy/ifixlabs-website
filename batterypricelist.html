@@ -126,192 +126,122 @@
         <!-- Gap -->
         <div class="fixed top-0 left-0 w-full z-[48] pointer-events-none bg-white h-[88px] sm:h-[104px]"></div>
         
-        <!-- Pricing Table (Excel Style with iFixLabs Branding) -->
-        <div class="bg-white rounded-xl shadow-2xl border excel-border overflow-hidden overflow-x-auto">
-            <table class="w-full border-collapse">
-                <thead>
-                    <tr class="excel-header text-white font-black text-left">
-                        <th class="py-4 px-6 border excel-border text-[9px] sm:text-[10px] uppercase tracking-widest whitespace-nowrap">
-                            <div class="flex items-center justify-between gap-2">
-                                IPHONE MODEL
-                                <i data-lucide="chevron-down" class="w-3 h-3 text-white/40"></i>
-                            </div>
-                        </th>
-                        <th class="py-4 px-4 border excel-border text-center text-[9px] sm:text-[10px] uppercase tracking-widest whitespace-nowrap min-w-[80px]">
-                            <div class="flex items-center justify-center gap-1">
-                                AAA
-                                <i data-lucide="chevron-down" class="w-3 h-3 text-white/40"></i>
-                            </div>
-                        </th>
-                        <th class="py-4 px-4 border excel-border text-center text-[9px] sm:text-[10px] uppercase tracking-widest whitespace-nowrap min-w-[100px]">
-                            <div class="flex items-center justify-center gap-1">
-                                HIGH CAPACITY
-                                <i data-lucide="chevron-down" class="w-3 h-3 text-white/40"></i>
-                            </div>
-                        </th>
-                        <th class="py-4 px-4 border excel-border text-center text-[9px] sm:text-[10px] uppercase tracking-widest whitespace-nowrap min-w-[140px]">
-                            <div class="flex items-center justify-center gap-1">
-                                DIAGNOSED STATS
-                                <i data-lucide="chevron-down" class="w-3 h-3 text-white/40"></i>
-                            </div>
-                        </th>
-                        <th class="py-4 px-4 border excel-border text-center text-[9px] sm:text-[10px] uppercase tracking-widest whitespace-nowrap min-w-[140px]">
-                            <div class="flex items-center justify-center gap-1">
-                                GENUINE STATS
-                                <i data-lucide="chevron-down" class="w-3 h-3 text-white/40"></i>
-                            </div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody id="priceTableBody" class="font-bold text-slate-700">
-                    <!-- Dynamic Content -->
-                </tbody>
-            </table>
-            
-            <div id="emptyState" class="hidden py-20 text-center space-y-4 bg-white">
-                <div class="w-16 h-16 bg-neutral-50 rounded-full flex items-center justify-center mx-auto">
-                    <i data-lucide="search" class="w-8 h-8 text-neutral-300"></i>
-                </div>
-                <p class="text-neutral-500 font-medium italic">No models found matching your search</p>
-                <button 
-                  onclick="document.getElementById('searchInput').value = ''; filterData('');"
-                  class="text-brand-purple font-bold text-sm hover:underline"
-                >
-                  Clear search
-                </button>
-            </div>
+        <div class="fixed top-0 left-0 w-full z-[48] pointer-events-none bg-white h-[88px] sm:h-[104px]"></div>
+
+<div class="sticky top-[70px] sm:top-[85px] h-6 bg-white z-20 -mb-6"></div>
+
+<div class="bg-white rounded-3xl shadow-xl shadow-purple-500/5 border border-brand-slate-100">
+
+    <div class="grid grid-cols-12 bg-brand-black text-white py-5 px-4 sm:px-8 text-[8px] sm:text-[10px] font-black uppercase tracking-widest border-b border-white/5 sticky top-[88px] sm:top-[104px] z-30 rounded-t-[24px] sm:rounded-t-[32px]">
+        <div class="col-span-4 flex items-center gap-2">
+            <i data-lucide="smartphone" class="w-4 h-4 text-brand-purple"></i>
+            Model
+        </div>
+        <div class="col-span-2 text-center border-l border-white/10 flex items-center justify-center gap-1">
+            AAA <i data-lucide="chevron-down" class="w-3 h-3 text-white/40"></i>
+        </div>
+        <div class="col-span-2 text-center border-l border-white/10 flex items-center justify-center gap-1">
+            High Cap <i data-lucide="chevron-down" class="w-3 h-3 text-white/40"></i>
+        </div>
+        <div class="col-span-2 text-center border-l border-white/10 flex items-center justify-center gap-1">
+            Diagnosed <i data-lucide="chevron-down" class="w-3 h-3 text-white/40"></i>
+        </div>
+        <div class="col-span-2 text-center border-l border-white/10 flex items-center justify-center gap-1">
+            Genuine <i data-lucide="chevron-down" class="w-3 h-3 text-white/40"></i>
+        </div>
+    </div>
+
+    <div id="priceTableBody" class="divide-y divide-brand-slate-100">
         </div>
 
-
-        <!-- Footer Meta -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-6 bg-white border border-neutral-100 rounded-3xl shadow-sm space-y-3">
-                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
-                    <i data-lucide="info" class="w-5 h-5 text-blue-600"></i>
-                </div>
-                <h4 class="font-bold text-neutral-800">AAA & OEM Grade</h4>
-                <p class="text-sm text-neutral-500 font-medium">Standard grade replacement cells for reliable everyday usage.</p>
-            </div>
-            <div class="p-6 bg-white border border-neutral-100 rounded-3xl shadow-sm space-y-3">
-                <div class="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center">
-                    <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600"></i>
-                </div>
-                <h4 class="font-bold text-neutral-800">Calibration Mapping</h4>
-                <p class="text-sm text-neutral-500 font-medium">Ensures your device correctly reports Battery Health and Peak Capacity.</p>
-            </div>
-            <div class="p-6 bg-white border border-neutral-100 rounded-3xl shadow-sm space-y-3">
-                <div class="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center">
-                    <i data-lucide="zap" class="w-5 h-5 text-brand-purple"></i>
-                </div>
-                <h4 class="font-bold text-neutral-800">Zero-Cycle Count</h4>
-                <p class="text-sm text-neutral-500 font-medium">Every cell is tested for absolute zero-cycle condition before installation.</p>
-            </div>
+    <div id="emptyState" class="hidden py-20 text-center space-y-4">
+        <div class="w-16 h-16 bg-brand-slate-100 rounded-full flex items-center justify-center mx-auto">
+            <i data-lucide="search" class="w-8 h-8 text-brand-slate-300"></i>
         </div>
+        <p class="text-brand-slate-500 font-medium italic">No models found matching your search</p>
+        <button onclick="document.getElementById('searchInput').value = ''; filterData('');" class="text-brand-purple font-bold text-sm hover:underline">
+            Clear search
+        </button>
+    </div>
+</div>
 
-        <footer class="pt-12 pb-10 text-center border-t border-neutral-100">
-            <p class="text-[10px] text-neutral-400 font-bold uppercase tracking-[0.2em] italic">
-                © iFixLabs Professional iPhone & Gadget Repair. Prices updated periodically.
-            </p>
-        </footer>
-    </main>
+<script>
+    // PRICING DATA ARRAY (Untouched)
+    const PRICING_DATA = [
+        { model: "8", aaa: 135, highCap: null, diagnosed: null, genuine: null },
+        { model: "8 PLUS", aaa: 140, highCap: null, diagnosed: null, genuine: null },
+        { model: "X", aaa: 110, highCap: null, diagnosed: null, genuine: null },
+        { model: "XS MAX", aaa: 150, highCap: null, diagnosed: null, genuine: null },
+        { model: "XR", aaa: 145, highCap: null, diagnosed: null, genuine: null },
+        { model: "11", aaa: 150, highCap: 170, diagnosed: null, genuine: null },
+        { model: "11 PRO", aaa: 160, highCap: 180, diagnosed: null, genuine: null },
+        { model: "11 PRO MAX", aaa: 160, highCap: 190, diagnosed: null, genuine: null },
+        { model: "12", aaa: 150, highCap: 200, diagnosed: 185, genuine: 250 },
+        { model: "12 MINI", aaa: 150, highCap: 190, diagnosed: 180, genuine: 240 },
+        { model: "12 PRO", aaa: 150, highCap: 200, diagnosed: 185, genuine: 250 },
+        { model: "12 PRO MAX", aaa: 170, highCap: 205, diagnosed: 195, genuine: 270 },
+        { model: "13", aaa: 160, highCap: 205, diagnosed: 190, genuine: 255 },
+        { model: "13 MINI", aaa: 160, highCap: 200, diagnosed: 190, genuine: 250 },
+        { model: "13 PRO", aaa: 160, highCap: 210, diagnosed: 205, genuine: 265 },
+        { model: "13 PRO MAX", aaa: 180, highCap: 215, diagnosed: 210, genuine: 280 },
+        { model: "14", aaa: 175, highCap: 210, diagnosed: 205, genuine: 275 },
+        { model: "14 PLUS", aaa: 180, highCap: 220, diagnosed: 230, genuine: 275 },
+        { model: "14 PRO", aaa: 185, highCap: 230, diagnosed: 220, genuine: 285 },
+        { model: "14 PRO MAX", aaa: 195, highCap: 250, diagnosed: 230, genuine: 300 },
+        { model: "15", aaa: 190, highCap: 250, diagnosed: 210, genuine: 285 },
+        { model: "15 PLUS", aaa: 195, highCap: 265, diagnosed: 225, genuine: 295 },
+        { model: "15 PRO", aaa: 200, highCap: 270, diagnosed: 230, genuine: 305 },
+        { model: "15 PRO MAX", aaa: 210, highCap: 290, diagnosed: 240, genuine: 315 },
+        { model: "16", aaa: 210, highCap: null, diagnosed: null, genuine: null },
+        { model: "16 PLUS", aaa: null, highCap: null, diagnosed: null, genuine: null },
+        { model: "16 PRO", aaa: null, highCap: null, diagnosed: null, genuine: null },
+        { model: "16 PRO MAX", aaa: 230, highCap: null, diagnosed: null, genuine: null },
+    ];
 
-    <!-- Floating UI -->
-    <button id="backToTop" class="fixed bottom-8 left-8 p-4 bg-white border border-neutral-200 rounded-full shadow-2xl opacity-0 translate-y-10 transition-all pointer-events-none group z-50">
-        <i data-lucide="arrow-up" class="w-5 h-5 text-neutral-500 group-hover:-translate-y-1 transition-transform"></i>
-    </button>
-
-    <script>
-        // PRICING DATA ARRAY
-        const PRICING_DATA = [
-            { model: "8", aaa: 135, highCap: null, diagnosed: null, genuine: null },
-            { model: "8 PLUS", aaa: 140, highCap: null, diagnosed: null, genuine: null },
-            { model: "X", aaa: 110, highCap: null, diagnosed: null, genuine: null },
-            { model: "XS MAX", aaa: 150, highCap: null, diagnosed: null, genuine: null },
-            { model: "XR", aaa: 145, highCap: null, diagnosed: null, genuine: null },
-            { model: "11", aaa: 150, highCap: 170, diagnosed: null, genuine: null },
-            { model: "11 PRO", aaa: 160, highCap: 180, diagnosed: null, genuine: null },
-            { model: "11 PRO MAX", aaa: 160, highCap: 190, diagnosed: null, genuine: null },
-            { model: "12", aaa: 150, highCap: 200, diagnosed: 185, genuine: 250 },
-            { model: "12 MINI", aaa: 150, highCap: 190, diagnosed: 180, genuine: 240 },
-            { model: "12 PRO", aaa: 150, highCap: 200, diagnosed: 185, genuine: 250 },
-            { model: "12 PRO MAX", aaa: 170, highCap: 205, diagnosed: 195, genuine: 270 },
-            { model: "13", aaa: 160, highCap: 205, diagnosed: 190, genuine: 255 },
-            { model: "13 MINI", aaa: 160, highCap: 200, diagnosed: 190, genuine: 250 },
-            { model: "13 PRO", aaa: 160, highCap: 210, diagnosed: 205, genuine: 265 },
-            { model: "13 PRO MAX", aaa: 180, highCap: 215, diagnosed: 210, genuine: 280 },
-            { model: "14", aaa: 175, highCap: 210, diagnosed: 205, genuine: 275 },
-            { model: "14 PLUS", aaa: 180, highCap: 220, diagnosed: 230, genuine: 275 },
-            { model: "14 PRO", aaa: 185, highCap: 230, diagnosed: 220, genuine: 285 },
-            { model: "14 PRO MAX", aaa: 195, highCap: 250, diagnosed: 230, genuine: 300 },
-            { model: "15", aaa: 190, highCap: 250, diagnosed: 210, genuine: 285 },
-            { model: "15 PLUS", aaa: 195, highCap: 265, diagnosed: 225, genuine: 295 },
-            { model: "15 PRO", aaa: 200, highCap: 270, diagnosed: 230, genuine: 305 },
-            { model: "15 PRO MAX", aaa: 210, highCap: 290, diagnosed: 240, genuine: 315 },
-            { model: "16", aaa: 210, highCap: null, diagnosed: null, genuine: null },
-            { model: "16 PLUS", aaa: null, highCap: null, diagnosed: null, genuine: null },
-            { model: "16 PRO", aaa: null, highCap: null, diagnosed: null, genuine: null },
-            { model: "16 PRO MAX", aaa: 230, highCap: null, diagnosed: null, genuine: null },
-        ];
-
-        function renderRows(data) {
-            const body = document.getElementById('priceTableBody');
-            const empty = document.getElementById('emptyState');
-            body.innerHTML = '';
-            
-            if (data.length === 0) {
-                empty.classList.remove('hidden');
-                return;
-            }
-            empty.classList.add('hidden');
-
-            data.forEach(item => {
-                const tr = document.createElement('tr');
-                tr.className = 'excel-row border-b excel-border group transition-colors';
-                
-                const formatVal = (val, colorClass) => {
-                    if (val === null) return '<span class="text-neutral-300 font-normal">-</span>';
-                    return '<span class="text-base ' + colorClass + ' font-bold"><span class="text-[10px] mr-1">RM</span>' + val + '</span>';
-                };
-
-                tr.innerHTML = ' \
-                    <td class="py-3 px-6 border excel-border font-bold text-neutral-800 uppercase ring-inset group-hover:text-brand-purple transition-colors"> \
-                        <div class="flex items-center gap-2"> \
-                            <span>' + item.model + '</span> \
-                            ' + (item.model.startsWith("16") ? '<span class="text-[7px] bg-brand-purple text-white px-1.5 py-0.5 rounded-sm font-black">LATEST</span>' : '') + ' \
-                         </div> \
-                    </td> \
-                    <td class="py-3 px-4 border excel-border text-center font-mono">' + formatVal(item.aaa, "text-brand-purple") + '</td> \
-                    <td class="py-3 px-4 border excel-border text-center font-mono">' + formatVal(item.highCap, "text-brand-green") + '</td> \
-                    <td class="py-3 px-4 border excel-border text-center font-mono">' + formatVal(item.diagnosed, "text-brand-purple") + '</td> \
-                    <td class="py-3 px-4 border excel-border text-center font-mono">' + formatVal(item.genuine, "text-brand-green") + '</td> \
-                ';
-                body.appendChild(tr);
-            });
+    function renderRows(data) {
+        const body = document.getElementById('priceTableBody');
+        const empty = document.getElementById('emptyState');
+        body.innerHTML = '';
+        
+        if (data.length === 0) {
+            empty.classList.remove('hidden');
+            return;
         }
+        empty.classList.add('hidden');
 
-        // Search logic
+        data.forEach(item => {
+            const row = document.createElement('div');
+            row.className = 'grid grid-cols-12 py-5 px-4 sm:px-8 items-center hover:bg-slate-50 transition-colors group';
+            
+            const formatVal = (val, colorClass) => {
+                if (val === null) return '<span class="text-slate-300 font-medium">-</span>';
+                return `<span class="${colorClass} font-bold tracking-tighter"><span class="text-[9px] sm:text-xs mr-0.5">RM</span>${val}</span>`;
+            };
+
+            row.innerHTML = `
+                <div class="col-span-4 flex items-center gap-2">
+                    <span class="font-bold text-brand-slate-800 text-xs sm:text-lg tracking-tight uppercase">${item.model}</span>
+                    ${item.model.startsWith("16") ? '<span class="text-[7px] bg-brand-purple text-white px-1 py-0.5 rounded font-black tracking-tighter">NEW</span>' : ''}
+                </div>
+                <div class="col-span-2 text-center font-mono text-sm sm:text-base">${formatVal(item.aaa, "text-brand-purple")}</div>
+                <div class="col-span-2 text-center font-mono text-sm sm:text-base">${formatVal(item.highCap, "text-brand-green")}</div>
+                <div class="col-span-2 text-center font-mono text-sm sm:text-base">${formatVal(item.diagnosed, "text-brand-purple")}</div>
+                <div class="col-span-2 text-center font-mono text-sm sm:text-base">${formatVal(item.genuine, "text-brand-green")}</div>
+            `;
+            body.appendChild(row);
+        });
+    }
+
+    // Initialize & Filter logic remains same...
+    document.addEventListener('DOMContentLoaded', () => {
+        renderRows(PRICING_DATA);
+        lucide.createIcons();
         document.getElementById('searchInput').addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
             const filtered = PRICING_DATA.filter(item => item.model.toLowerCase().includes(query));
             renderRows(filtered);
         });
-
-        // Back to top scroll
-        const scrollBtn = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
-            } else {
-                scrollBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
-            }
-        });
-        scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-        // Initial Layout
-        document.addEventListener('DOMContentLoaded', () => {
-            renderRows(PRICING_DATA);
-            lucide.createIcons();
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
