@@ -4,62 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/1080.ico">
-    <title>iFixLabs - Backglass Price List</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
+    <title>iFixLabs | Professional iPhone & Gadget Repair</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'brand-black': '#1A122E',
-                        'brand-purple': '#7C5DFA',
-                        'brand-green': '#22C55E',
-                        'brand-slate': {
-                            50: '#F8FAFC',
-                            100: '#F1F5F9',
-                            200: '#E2E8F0',
-                            400: '#94A3B8',
-                            500: '#64748B',
-                            800: '#1e293b',
-                        }
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        display: ['Outfit', 'sans-serif'],
+                        logo: ['Outfit', 'sans-serif']
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif'],
-                        logo: ['Outfit', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
+                    colors: { brand: { black: '#1A122E', purple: '#7C5DFA', 'light-purple': '#F3F0FF' } }
                 }
             }
         }
     </script>
-
     <style>
-        body {
-            background-color: #F8FAFC;
-        }
-        .backdrop-blur-md {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .backdrop-blur-xl {
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-        }
+        .backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+        .step-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
     </style>
 </head>
-<body class="font-sans text-brand-slate-800 antialiased selection:bg-brand-purple selection:text-white">
+<body class="bg-white text-brand-black selection:bg-brand-purple selection:text-white">
 
     <!-- Navbar -->
      <!-- //MAIN CODE START - BRANDING HEADER -->
