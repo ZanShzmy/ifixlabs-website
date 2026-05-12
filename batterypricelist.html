@@ -126,40 +126,40 @@
         <!-- Gap -->
         <div class="fixed top-0 left-0 w-full z-[48] pointer-events-none bg-white h-[88px] sm:h-[104px]"></div>
         
-        <!-- Pricing Table (Excel Style with iFixLabs Branding) -->
-        <div class="bg-white rounded-xl shadow-2xl border excel-border overflow-hidden overflow-x-auto">
-            <table class="w-full border-collapse">
-                <thead>
-                    <tr class="excel-header text-white font-black text-left">
-                        <th class="py-4 px-6 border excel-border text-[9px] sm:text-[10px] uppercase tracking-widest whitespace-nowrap">
-                            
-                            <div class="grid grid-cols-12 bg-brand-black text-white py-5 px-6 sm:px-8 text-xs font-bold uppercase tracking-widest border-b border-white/5 sticky top-[88px] sm:top-[104px] z-30 rounded-t-[24px] sm:rounded-t-[32px]">
+        <!-- Pricing Grid/Table -->
+        <div class="bg-white rounded-3xl shadow-xl shadow-purple-500/5 border border-brand-slate-100">
+
+        <!-- Table Header -->
+            <div class="grid grid-cols-12 bg-brand-black text-white py-5 px-6 sm:px-8 text-xs font-bold uppercase tracking-widest border-b border-white/5 sticky top-[88px] sm:top-[104px] z-30 rounded-t-[24px] sm:rounded-t-[32px]">
             <div class="col-span-6 sm:col-span-5 flex items-center gap-2">
                 <i data-lucide="smartphone" class="w-4 h-4 text-brand-purple"></i>
                 Model
             </div>
             <div class="col-span-3 sm:col-span-3 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
-                No Magnet
+                AAA
             </div>
             <div class="col-span-3 sm:col-span-4 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
-                Magnet
+                HIGH CAPACITY
+            </div>
+            <div class="col-span-3 sm:col-span-4 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
+                DIAGNOSED STATS
+            </div>
+            <div class="col-span-3 sm:col-span-4 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
+                GENUINE STATS
             </div>
         </div>
-    
-                        </th>
-                    </tr>
-                </thead>
-                <tbody id="priceTableBody" class="font-bold text-slate-700">
 
-                    <!-- Dynamic Content -->
-                </tbody>
-            </table>
+            <!-- Table Body -->
+            <div id="priceTableBody" class="divide-y divide-brand-slate-100">
+                <!-- Rows will be injected here by JS -->
+            </div>
             
-            <div id="emptyState" class="hidden py-20 text-center space-y-4 bg-white">
-                <div class="w-16 h-16 bg-neutral-50 rounded-full flex items-center justify-center mx-auto">
-                    <i data-lucide="search" class="w-8 h-8 text-neutral-300"></i>
+            <!-- Empty State -->
+            <div id="emptyState" class="hidden py-20 text-center space-y-4">
+                <div class="w-16 h-16 bg-brand-slate-100 rounded-full flex items-center justify-center mx-auto">
+                    <i data-lucide="search" class="w-8 h-8 text-brand-slate-300"></i>
                 </div>
-                <p class="text-neutral-500 font-medium italic">No models found matching your search</p>
+                <p class="text-brand-slate-500 font-medium italic">No models found matching your search</p>
                 <button 
                   onclick="document.getElementById('searchInput').value = ''; filterData('');"
                   class="text-brand-purple font-bold text-sm hover:underline"
@@ -168,6 +168,7 @@
                 </button>
             </div>
         </div>
+
 
         <!-- Footer Meta -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
