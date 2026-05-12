@@ -5,86 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/1080.ico">
     <title>iFixLabs | Professional iPhone & Gadget Repair</title>
-    <meta property="og:description" content="On-Site Services iPhone Specialist.">
-    <meta name="description" content="One to one repair in front of eyes. Fast service, quality parts, and specialized in iPhone repair. WhatsApp us today!">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif'],
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        display: ['Outfit', 'sans-serif'],
+                        logo: ['Outfit', 'sans-serif']
                     },
-                    colors: {
-                        brand: {
-                            black: '#1A122E',
-                            purple: '#7C5DFA',
-                            'light-purple': '#F3F0FF',
-                            accent: '#9277FF',
-                            gray: '#373B53',
-                        }
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
+                    colors: { brand: { black: '#1A122E', purple: '#7C5DFA', 'light-purple': '#F3F0FF' } }
                 }
             }
         }
     </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .font-display {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        [x-cloak] { display: none !important; }
-        
-        .step-transition {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        .backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+        .step-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
     </style>
 </head>
 <body class="bg-white text-brand-black selection:bg-brand-purple selection:text-white">
  
-    <!-- Navbar -->
-     <!-- //MAIN CODE START - BRANDING HEADER -->
+    <!-- Navbar (Branding Header Synchronized with Backglass Style) -->
+    <!-- //MAIN CODE START - BRANDING HEADER -->
     <nav class="fixed top-0 w-full z-50 px-4 py-6 pointer-events-none">
-        <div class="max-w-6xl mx-auto flex justify-between items-center bg-brand-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl px-6 py-3.5 pointer-events-auto">
+        <div class="max-w-6xl mx-auto relative flex justify-between items-center bg-brand-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl px-6 py-3.5 pointer-events-auto">
+            <!-- Logo Section -->
             <a href="/" class="flex items-center gap-2 group cursor-pointer hover:opacity-80 transition-opacity">
                 <div class="bg-brand-purple p-1 rounded-lg overflow-hidden transition-transform group-hover:scale-110">
                     <img src="/1080.ico" alt="iFixLabs Logo" class="w-5 h-5 object-contain">
                 </div>
-                <!-- //MAIN CODE: Use font-logo (Outfit) for specific logo styling -->
+                <!-- //MAIN CODE: Logo character rendering -->
                 <div class="font-logo font-black tracking-tighter text-xl flex items-baseline gap-0.5">
                     <span class="text-white">iFix</span>
                     <span class="text-brand-purple">Labs</span>
                 </div>
             </a>
-                
-            <div class="hidden md:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
-                <a href="/index.html#services" class="hover:text-brand-purple transition-colors">Services</a>
-                <a href="/index.html#reviews" class="hover:text-brand-purple transition-colors">Reviews</a>
-                <a href="/index.html#coverage" class="hover:text-brand-purple transition-colors">Coverage</a>
+            
+            <!-- Desktop Navigation - Perfectly Centered -->
+            <div class="hidden md:absolute md:inset-x-0 md:flex md:justify-center pointer-events-none">
+                <div class="flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 pointer-events-auto">
+                    <a href="#services" class="hover:text-brand-purple transition-colors">Services</a>
+                    <a href="#reviews" class="hover:text-brand-purple transition-colors">Reviews</a>
+                    <a href="#coverage" class="hover:text-brand-purple transition-colors">Coverage</a>
+                </div>
             </div>
 
-            <div class="flex items-center ml-auto md:ml-0">
-                <a 
-                    href="https://wa.me/+60176198047" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="bg-[#25D366] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[9px] sm:text-[10px] font-black uppercase tracking-[0.15em] sm:tracking-[0.2em] flex items-center gap-1.5 sm:gap-2 transition-all hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(37,211,102,0.4)] active:scale-95 shadow-lg whitespace-nowrap"
-                >
+            <!-- Action Section -->
+            <div class="flex items-center">
+                <a href="https://wa.me/+60176198047" target="_blank" class="bg-[#25D366] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[9px] sm:text-[10px] font-black uppercase tracking-[0.15em] sm:tracking-[0.2em] flex items-center gap-1.5 sm:gap-2 transition-all hover:scale-[1.02] active:scale-95 shadow-lg whitespace-nowrap">
                     <i data-lucide="message-circle" class="w-4 h-4"></i>
                     <span>WhatsApp Us!</span>
                 </a>
