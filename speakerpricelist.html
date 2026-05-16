@@ -247,43 +247,60 @@
         ];
 
         function renderRows(data) {
-            const container = document.getElementById('priceTableBody');
-            const emptyState = document.getElementById('emptyState');
-            
-            container.innerHTML = '';
-            
-            if (data.length === 0) {
-                emptyState.classList.remove('hidden');
-                return;
-            } else {
-                emptyState.classList.add('hidden');
-            }
+    const container = document.getElementById('priceTableBody');
+    const emptyState = document.getElementById('emptyState');
 
-            data.forEach((item) => {
-                const row = document.createElement('div');
-                row.className = `grid grid-cols-12 py-5 px-6 sm:px-8 items-center cursor-default transition-colors ${item.notable ? 'bg-purple-50/30' : 'hover:bg-slate-50'}`;
-                
-                row.innerHTML = 
-                
-                    <div class="col-span-3 sm:col-span-3 text-center sm:text-left pl-4 font-mono text-brand-purple">
-                        ${item.Earspeaker ? `
-                            <span class="text-lg font-bold tracking-tighter">
-                                <span class="text-sm mr-0.5">RM</span>${item.Earspeaker}
-                            </span>
-                        ` : '<span class="text-slate-300 font-medium">-</span>'}
-                    </div>
+    container.innerHTML = '';
 
-                    <div class="col-span-3 sm:col-span-4 text-center sm:text-left pl-4 font-mono text-green-500">
-                        ${item.Loudspeaker ? `
-                            <span class="text-lg font-bold tracking-tighter">
-                                <span class="text-sm mr-0.5">RM</span>${item.Loudspeaker}
-                            </span>
-                        ` : '<span class="text-slate-300 font-medium">-</span>'}
-                    </div>
-                `;
-                container.appendChild(row);
-            });
-        }
+    if (data.length === 0) {
+        emptyState.classList.remove('hidden');
+        return;
+    } else {
+        emptyState.classList.add('hidden');
+    }
+
+    data.forEach((item) => {
+        const row = document.createElement('div');
+
+        row.className = `grid grid-cols-12 py-5 px-6 sm:px-8 items-center cursor-default transition-colors ${
+            item.notable ? 'bg-purple-50/30' : 'hover:bg-slate-50'
+        }`;
+
+        row.innerHTML = `
+            <div class="col-span-6 sm:col-span-5 flex items-center gap-3">
+                <span class="font-bold text-brand-black sm:text-lg tracking-tight">
+                    ${item.model}
+                </span>
+
+                ${item.notable ? `
+                    <span class="hidden sm:inline-block px-1.5 py-0.5 bg-green-100 text-green-700 text-[9px] font-black uppercase rounded tracking-tighter">
+                        Latest
+                    </span>
+                ` : ''}
+            </div>
+
+            <div class="col-span-3 sm:col-span-3 text-center sm:text-left pl-4 font-mono text-brand-purple">
+                ${item.earspeaker ? `
+                    <span class="text-lg font-bold tracking-tighter">
+                        <span class="text-sm mr-0.5">RM</span>${item.earspeaker}
+                    </span>
+                ` : '<span class="text-slate-300 font-medium">-</span>'}
+            </div>
+
+            <div class="col-span-3 sm:col-span-4 text-center sm:text-left pl-4 font-mono text-green-500">
+                ${item.loudspeaker ? `
+                    <span class="text-lg font-bold tracking-tighter">
+                        <span class="text-sm mr-0.5">RM</span>${item.loudspeaker}
+                    </span>
+                ` : '<span class="text-slate-300 font-medium">-</span>'}
+            </div>
+        `;
+
+        container.appendChild(row);
+    });
+
+    lucide.createIcons();
+}
 
         function filterData(query) {
             const filtered = PRICING_DATA.filter(item => 
