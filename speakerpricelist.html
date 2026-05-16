@@ -1,323 +1,213 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/1080.ico">
-    <title>iFixLabs | Professional iPhone & Gadget Repair</title>
+    <title>iFixLabs - Speaker Price List</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { 
-                        sans: ['Inter', 'sans-serif'], 
-                        display: ['Outfit', 'sans-serif'],
-                        logo: ['Outfit', 'sans-serif']
+                    colors: {
+                        'brand-black': '#12121A',
+                        'brand-purple': '#8B5CF6',
+                        'brand-green': '#22C55E',
+                        'brand-slate': {
+                            50: '#F8FAFC',
+                            100: '#F1F5F9',
+                            200: '#E2E8F0',
+                            400: '#94A3B8',
+                            500: '#64748B',
+                            800: '#1e293b',
+                        }
                     },
-                    colors: { brand: { black: '#1A122E', purple: '#7C5DFA', 'light-purple': '#F3F0FF' } }
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
                 }
             }
         }
     </script>
-    <style>
-        
-        .backdrop-blur-xl { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
-        .step-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
 
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #7C5DFA; border-radius: 4px; }
-        
+    <style>
+        body { background-color: #F8FAFC; }
+        .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="bg-white text-brand-black selection:bg-brand-purple selection:text-white">
+<body class="font-sans text-brand-slate-800 antialiased">
 
-    <!-- Gap -->
-    <div class="fixed top-0 left-0 w-full z-[48] pointer-events-none bg-white h-[88px] sm:h-[104px]"></div>
-    
-    <!-- Navbar (Branding Header Synchronized with Backglass Style) -->
-    <!-- //MAIN CODE START - BRANDING HEADER -->
-    <nav class="fixed top-0 w-full z-50 px-4 py-6 pointer-events-none">
-        <div class="max-w-6xl mx-auto relative flex justify-between items-center bg-brand-black/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl px-6 py-3.5 pointer-events-auto">
-            <!-- Logo Section -->
-            <a href="/" class="flex items-center gap-2 group cursor-pointer hover:opacity-80 transition-opacity">
-                <div class="bg-brand-purple p-1 rounded-lg overflow-hidden transition-transform group-hover:scale-110">
-                    <img src="/1080.ico" alt="iFixLabs Logo" class="w-5 h-5 object-contain">
+    <header class="sticky top-0 z-50 bg-brand-black text-white shadow-lg lg:rounded-b-2xl max-w-7xl mx-auto w-full transition-all">
+        <div class="px-6 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <div class="w-10 h-10 bg-brand-purple rounded-xl flex items-center justify-center border border-white/10 shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+                    <i data-lucide="volume-2" class="w-6 h-6 text-white"></i>
                 </div>
-                <!-- //MAIN CODE: Logo character rendering -->
-                <div class="font-logo font-black tracking-tighter text-xl flex items-baseline gap-0.5">
-                    <span class="text-white">iFix</span>
-                    <span class="text-brand-purple">Labs</span>
+                <div>
+                    <h1 class="font-bold text-xl tracking-tight">iFix<span class="text-brand-purple">Labs</span></h1>
                 </div>
             </a>
-            
-            <!-- Desktop Navigation - Perfectly Centered -->
-            <div class="hidden md:absolute md:inset-x-0 md:flex md:justify-center pointer-events-none">
-                <div class="flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 pointer-events-auto">
-                    <a href="/index.html#services" class="hover:text-brand-purple transition-colors">Services</a>
-                    <a href="/index.html#reviews" class="hover:text-brand-purple transition-colors">Reviews</a>
-                    <a href="/index.html#coverage" class="hover:text-brand-purple transition-colors">Coverage</a>
-                </div>
-            </div>
 
-            <!-- Action Section -->
-            <div class="flex items-center">
-                <a href="https://wa.me/+60176198047" target="_blank" class="bg-[#25D366] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[9px] sm:text-[10px] font-black uppercase tracking-[0.15em] sm:tracking-[0.2em] flex items-center gap-1.5 sm:gap-2 transition-all hover:scale-[1.02] active:scale-95 shadow-lg whitespace-nowrap">
-                    <i data-lucide="message-circle" class="w-4 h-4"></i>
-                    <span>WhatsApp Us!</span>
-                </a>
-            </div>
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-white/70">
+                <a href="/index.html#services" class="hover:text-brand-purple transition-colors">Services</a>
+                <a href="/index.html#reviews" class="hover:text-brand-purple transition-colors">Reviews</a>
+                <a href="/index.html#coverage" class="hover:text-brand-purple transition-colors">Coverage</a>
+            </nav>
+
+            <a href="https://wa.me/+60176198047" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 bg-brand-green hover:bg-[#16A34A] text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-green-500/20 uppercase">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span class="hidden sm:inline">Whatsapp Us!</span>
+            </a>
         </div>
-    </nav>
-    <!-- //MAIN CODE END -->
+    </header>
 
-    <div class="h-24 sm:h-32"></div>
-    
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
-        <!-- Hero Section -->
         <div class="text-center space-y-4 max-w-4xl mx-auto">
-            <div role="status" aria-label="Repair status">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-purple-200">
-                    <i data-lucide="shield-check" class="w-3 h-3"></i>
-                    Professional Grade Repair
-                </div>
-                <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-black tracking-tighter leading-[0.85]">
-                    Backglass Repair <br />
-                    <span class="text-brand-purple">Price List</span>
-
-                 <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-black tracking-tighter leading-[0.85]">
-                    
-                </h2>
-                <p class="mt-8 text-neutral-500 text-lg font-medium leading-relaxed max-w-2xl mx-auto italic">
-                    Shattered back glass? We restore your device aesthetic using laboratory-standard precision.
-                </p>
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-purple-200">
+                <i data-lucide="shield-check" class="w-3 h-3"></i>
+                Professional Grade Repair
             </div>
+            <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-black tracking-tighter leading-[0.85]">
+                Speaker Repair <br />
+                <span class="text-brand-purple">Price List</span>
+            </h2>
+            <p class="mt-8 text-brand-slate-500 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
+                Crackling or muffled audio? We restore crystal-clear sound using laboratory-standard precision.
+            </p>
         </div>
 
-        <!-- Search & Stats -->
-        <div class="max-w-xl mx-auto">
-            <div class="relative group">
-                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-brand-purple transition-colors"></i>
-                <input 
-                  type="text" 
-                  id="searchInput"
-                  placeholder="Search model (e.g. 13 PRO MAX)..." 
-                  class="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-purple/10 focus:border-brand-purple transition-all shadow-sm font-medium"
-                />
-            </div>
-        </div>
-
-              <div class="flex items-center gap-6 text-sm text-brand-slate-500 font-semibold whitespace-nowrap overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
-                <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-sm border border-brand-slate-100 italic">
+        <div class="sticky top-24 z-40 bg-brand-slate-50/80 backdrop-blur-md pt-4 pb-6 border-b border-slate-200">
+           <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
+              <div class="relative w-full sm:max-w-md group">
+                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-slate-400 group-focus-within:text-brand-purple transition-colors"></i>
+                <input type="text" id="searchInput" placeholder="Search iPhone model..." 
+                  class="w-full pl-12 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-purple-500/10 focus:border-brand-purple transition-all shadow-sm font-medium" />
+              </div>
+              <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-sm border border-brand-slate-100 italic text-sm text-brand-slate-500 font-semibold">
                   <i data-lucide="clock" class="w-4 h-4 text-orange-500"></i>
                   1 Hour Fix
-                </div>
               </div>
            </div>
         </div>
 
-        <!-- Gap -->
-        <div class="sticky top-[70px] sm:top-[85px] h-6 bg-white z-20 -mb-6"></div>
-        
-        <!-- Pricing Grid/Table -->
-        <div class="bg-white rounded-3xl shadow-xl shadow-purple-500/5 border border-brand-slate-100">
-
-        <!-- Table Header -->
-            <div class="grid grid-cols-12 bg-brand-black text-white py-5 px-6 sm:px-8 text-xs font-bold uppercase tracking-widest border-b border-white/5 sticky top-[88px] sm:top-[104px] z-30 rounded-t-[24px] sm:rounded-t-[32px]">
-            <div class="col-span-6 sm:col-span-5 flex items-center gap-2">
-                <i data-lucide="smartphone" class="w-4 h-4 text-brand-purple"></i>
-                Model
-            </div>
-            <div class="col-span-3 sm:col-span-3 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
-                No Magnet
-            </div>
-            <div class="col-span-3 sm:col-span-4 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
-                Magnet
-            </div>
-        </div>
-
-            <!-- Table Body -->
-            <div id="priceTableBody" class="divide-y divide-brand-slate-100">
-                <!-- Rows will be injected here by JS -->
-            </div>
-            
-            <!-- Empty State -->
-            <div id="emptyState" class="hidden py-20 text-center space-y-4">
-                <div class="w-16 h-16 bg-brand-slate-100 rounded-full flex items-center justify-center mx-auto">
-                    <i data-lucide="search" class="w-8 h-8 text-brand-slate-300"></i>
+        <div class="bg-white rounded-3xl shadow-xl shadow-purple-500/5 border border-brand-slate-100 overflow-hidden">
+            <div class="grid grid-cols-12 bg-brand-black text-white py-5 px-6 sm:px-8 text-xs font-bold uppercase tracking-widest border-b border-white/5">
+                <div class="col-span-6 sm:col-span-5 flex items-center gap-2">
+                    <i data-lucide="smartphone" class="w-4 h-4 text-brand-purple"></i> Model
                 </div>
-                <p class="text-brand-slate-500 font-medium italic">No models found matching your search</p>
-                <button 
-                  onclick="document.getElementById('searchInput').value = ''; filterData('');"
-                  class="text-brand-purple font-bold text-sm hover:underline"
-                >
-                  Clear search
-                </button>
+                <div class="col-span-3 sm:col-span-3 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
+                    Earspeaker
+                </div>
+                <div class="col-span-3 sm:col-span-4 text-center sm:text-left border-l border-white/10 pl-4 flex items-center justify-center sm:justify-start gap-2">
+                    Loudspeaker
+                </div>
+            </div>
+
+            <div id="priceTableBody" class="divide-y divide-brand-slate-100">
+                </div>
+            
+            <div id="emptyState" class="hidden py-20 text-center space-y-4">
+                <p class="text-brand-slate-500 font-medium italic">No models found</p>
             </div>
         </div>
 
-        <!-- Footer Notes -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="p-6 bg-white border border-brand-slate-100 rounded-3xl shadow-sm space-y-3">
-                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
-                    <i data-lucide="info" class="w-5 h-5 text-blue-600"></i>
-                </div>
-                <h4 class="font-bold text-brand-slate-800">OEM Quality</h4>
-                <p class="text-sm text-brand-slate-500 font-medium leading-relaxed">
-                    We use OEM glass that matches the density and color profile of your factory device.
-                </p>
+                <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center"><i data-lucide="info" class="w-5 h-5 text-blue-600"></i></div>
+                <h4 class="font-bold text-brand-slate-800">Original Quality</h4>
+                <p class="text-sm text-brand-slate-500 font-medium">Original audio performance and frequency response.</p>
             </div>
             <div class="p-6 bg-white border border-brand-slate-100 rounded-3xl shadow-sm space-y-3">
-                <div class="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center">
-                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-green"></i>
-                </div>
-                <h4 class="font-bold text-brand-slate-800">Water Resistance</h4>
-                <p class="text-sm text-brand-slate-500 font-medium leading-relaxed">
-                    New gaskets are applied to ensure your device maintains its water and dust resistance standards.
-                </p>
+                <div class="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5 text-brand-green"></i></div>
+                <h4 class="font-bold text-brand-slate-800">FaceID Safety</h4>
+                <p class="text-sm text-brand-slate-500 font-medium">Sensors are handled with care to keep FaceID functional.</p>
             </div>
             <div class="p-6 bg-white border border-brand-slate-100 rounded-3xl shadow-sm space-y-3">
-                <div class="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center">
-                    <i data-lucide="arrow-left" class="w-5 h-5 text-brand-purple"></i>
-                </div>
-                <h4 class="font-bold text-brand-slate-800">Trade-in Ready</h4>
-                <p class="text-sm text-brand-slate-500 font-medium leading-relaxed">
-                    Repairs are performed with such precision that they pass all major trade-in inspections.
-                </p>
+                <div class="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center"><i data-lucide="clock" class="w-5 h-5 text-brand-purple"></i></div>
+                <h4 class="font-bold text-brand-slate-800">Quick Turnaround</h4>
+                <p class="text-sm text-brand-slate-500 font-medium">Most speaker repairs are completed in under an hour.</p>
             </div>
         </div>
-
-        <footer class="pt-12 pb-6 text-center border-t border-brand-slate-200">
-            <p class="text-xs text-brand-slate-400 font-bold uppercase tracking-widest italic">
-                Prices are subject to change based on part availability and market rates.
-            </p>
-        </footer>
     </main>
-
-    <!-- Floating Back Button -->
-   <a 
-    href="#" 
-    id="back-to-top"
-    onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"
-            class="fixed bottom-8 left-8 p-4 bg-white border border-brand-slate-200 rounded-full shadow-2xl hover:bg-brand-slate-50 transition-all group z-50 flex opacity-0 pointer-events-none translate-y-4">
-        <i data-lucide="arrow-up" class="w-5 h-5 text-brand-slate-500 group-hover:-translate-y-1 transition-transform"></i>
-    </a>
 
     <script>
         const PRICING_DATA = [
             { model: "iPhone 8", earspeaker: 100, loudspeaker: 100 },
-    { model: "iPhone 8 Plus", earspeaker: 100, loudspeaker: 100 },
-    { model: "iPhone X", earspeaker: 145, loudspeaker: 110 },
-    { model: "iPhone XS", earspeaker: 145, loudspeaker: 110 },
-    { model: "iPhone XS Max", earspeaker: 140, loudspeaker: 110 },
-    { model: "iPhone XR", earspeaker: 135, loudspeaker: 115 },
-    { model: "iPhone 11", earspeaker: 135, loudspeaker: 125 },
-    { model: "iPhone 11 Pro", earspeaker: 140, loudspeaker: 130 },
-    { model: "iPhone 11 Pro Max", earspeaker: 145, loudspeaker: 140 },
-    { model: "iPhone 12", earspeaker: 155, loudspeaker: 130 },
-    { model: "iPhone 12 Mini", earspeaker: 150, loudspeaker: 155 },
-    { model: "iPhone 12 Pro", earspeaker: 155, loudspeaker: 130 },
-    { model: "iPhone 12 Pro Max", earspeaker: 160, loudspeaker: 135 },
-    { model: "iPhone 13", earspeaker: 145, loudspeaker: 150 },
-    { model: "iPhone 13 Mini", earspeaker: 150, loudspeaker: 145 },
-    { model: "iPhone 13 Pro", earspeaker: 150, loudspeaker: 150 },
-    { model: "iPhone 13 Pro Max", earspeaker: 150, loudspeaker: 145 },
-    { model: "iPhone 14", earspeaker: 175, loudspeaker: 150},
-    { model: "iPhone 14 Plus", earspeaker: 175, loudspeaker: 155},
-    { model: "iPhone 14 Pro", earspeaker: 155, loudspeaker: 165 },
-    { model: "iPhone 14 Pro Max", earspeaker: 155, loudspeaker: 170 },
-    { model: "iPhone 15", earspeaker: 170, loudspeaker: 170},
-    { model: "iPhone 15 Plus", earspeaker: 175, loudspeaker: 185},
-    { model: "iPhone 15 Pro", earspeaker: 170, loudspeaker: 165},
-    { model: "iPhone 15 Pro Max", earspeaker: 165, loudspeaker: 165},
-    { model: "iPhone 16", earspeaker: 190, loudspeaker: 185},
-    { model: "iPhone 16 Plus", earspeaker: 175, loudspeaker: 180},
-    { model: "iPhone 16 Pro", earspeaker: 180, loudspeaker: 190},
-    { model: "iPhone 16 Pro Max", earspeaker: 180, loudspeaker: 185},
-    { model: "iPhone 16e", earspeaker: 180, loudspeaker: 190},
-    { model: "iPhone 17", earspeaker: null, loudspeaker: null},
-    { model: "iPhone 17 pro", earspeaker: 195, loudspeaker: null},
-    { model: "iPhone 17 pro max", earspeaker: 195, loudspeaker: null},
-    { model: "iPhone 17 air", earspeaker: 200, loudspeaker: null}
-];
+            { model: "iPhone 8 Plus", earspeaker: 100, loudspeaker: 100 },
+            { model: "iPhone X", earspeaker: 145, loudspeaker: 110 },
+            { model: "iPhone XS", earspeaker: 145, loudspeaker: 110 },
+            { model: "iPhone XS Max", earspeaker: 140, loudspeaker: 110 },
+            { model: "iPhone XR", earspeaker: 135, loudspeaker: 115 },
+            { model: "iPhone 11", earspeaker: 135, loudspeaker: 125 },
+            { model: "iPhone 11 Pro", earspeaker: 140, loudspeaker: 130 },
+            { model: "iPhone 11 Pro Max", earspeaker: 145, loudspeaker: 140 },
+            { model: "iPhone 12", earspeaker: 155, loudspeaker: 130 },
+            { model: "iPhone 12 Mini", earspeaker: 150, loudspeaker: 155 },
+            { model: "iPhone 12 Pro", earspeaker: 155, loudspeaker: 130 },
+            { model: "iPhone 12 Pro Max", earspeaker: 160, loudspeaker: 135 },
+            { model: "iPhone 13", earspeaker: 145, loudspeaker: 150 },
+            { model: "iPhone 13 Mini", earspeaker: 150, loudspeaker: 145 },
+            { model: "iPhone 13 Pro", earspeaker: 150, loudspeaker: 150 },
+            { model: "iPhone 13 Pro Max", earspeaker: 150, loudspeaker: 145 },
+            { model: "iPhone 14", earspeaker: 175, loudspeaker: 150, notable: true },
+            { model: "iPhone 14 Plus", earspeaker: 175, loudspeaker: 155, notable: true },
+            { model: "iPhone 14 Pro", earspeaker: 155, loudspeaker: 165 },
+            { model: "iPhone 14 Pro Max", earspeaker: 155, loudspeaker: 170 },
+            { model: "iPhone 15", earspeaker: 170, loudspeaker: 170, notable: true },
+            { model: "iPhone 15 Plus", earspeaker: 175, loudspeaker: 185, notable: true },
+            { model: "iPhone 15 Pro", earspeaker: 170, loudspeaker: 165, notable: true },
+            { model: "iPhone 15 Pro Max", earspeaker: 165, loudspeaker: 165, notable: true },
+            { model: "iPhone 16", earspeaker: 190, loudspeaker: 185, notable: true },
+            { model: "iPhone 16 Plus", earspeaker: 175, loudspeaker: 180, notable: true },
+            { model: "iPhone 16 Pro", earspeaker: 180, loudspeaker: 190, notable: true },
+            { model: "iPhone 16 Pro Max", earspeaker: 180, loudspeaker: 185, notable: true },
+            { model: "iPhone 16e", earspeaker: 180, loudspeaker: 190, notable: true },
+            { model: "iPhone 17", earspeaker: null, loudspeaker: null, notable: true },
+            { model: "iPhone 17 pro", earspeaker: 195, loudspeaker: null, notable: true },
+            { model: "iPhone 17 pro max", earspeaker: 195, loudspeaker: null, notable: true },
+            { model: "iPhone 17 air", earspeaker: 200, loudspeaker: null, notable: true }
+        ];
 
         function renderRows(data) {
             const container = document.getElementById('priceTableBody');
             const emptyState = document.getElementById('emptyState');
-            
             container.innerHTML = '';
-            
-            if (data.length === 0) {
-                emptyState.classList.remove('hidden');
-                return;
-            } else {
-                emptyState.classList.add('hidden');
-            }
+            if (data.length === 0) { emptyState.classList.remove('hidden'); return; } else { emptyState.classList.add('hidden'); }
 
             data.forEach((item) => {
                 const row = document.createElement('div');
-                row.className = `grid grid-cols-12 py-5 px-6 sm:px-8 items-center cursor-default transition-colors ${item.notable ? 'bg-purple-50/30' : 'hover:bg-slate-50'}`;
-                
+                row.className = `grid grid-cols-12 py-5 px-6 sm:px-8 items-center transition-colors ${item.notable ? 'bg-purple-50/30' : 'hover:bg-slate-50'}`;
                 row.innerHTML = `
-                    <div class="col-span-6 sm:col-span-5 flex items-center gap-3">
-                        <span class="font-bold text-brand-slate-800 sm:text-lg tracking-tight">${item.model}</span>
-                        ${item.notable ? '<span class="hidden sm:inline-block px-1.5 py-0.5 bg-green-100 text-green-700 text-[9px] font-black uppercase rounded tracking-tighter">MagSafe</span>' : ''}
+                    <div class="col-span-6 sm:col-span-5 font-bold text-brand-slate-800 sm:text-lg tracking-tight">${item.model}</div>
+                    <div class="col-span-3 sm:col-span-3 text-center sm:text-left pl-4 font-mono text-brand-purple flex items-center justify-center sm:justify-start">
+                        ${item.earspeaker ? `<span class="text-lg font-bold tracking-tighter"><span class="text-sm mr-0.5">RM</span>${item.earspeaker}</span>` : '<span class="text-slate-300 font-medium">-</span>'}
                     </div>
-                    
-                    <div class="col-span-3 sm:col-span-3 text-center sm:text-left pl-4 font-mono text-brand-purple">
-                        ${item.noMagnet ? `
-                            <span class="text-lg font-bold tracking-tighter">
-                                <span class="text-sm mr-0.5">RM</span>${item.noMagnet}
-                            </span>
-                        ` : '<span class="text-slate-300 font-medium">-</span>'}
-                    </div>
-
-                    <div class="col-span-3 sm:col-span-4 text-center sm:text-left pl-4 font-mono text-green-500">
-                        ${item.magnet ? `
-                            <span class="text-lg font-bold tracking-tighter">
-                                <span class="text-sm mr-0.5">RM</span>${item.magnet}
-                            </span>
-                        ` : '<span class="text-slate-300 font-medium">-</span>'}
-                    </div>
-                `;
+                    <div class="col-span-3 sm:col-span-4 text-center sm:text-left pl-4 font-mono text-brand-green flex items-center justify-center sm:justify-start">
+                        ${item.loudspeaker ? `<span class="text-lg font-bold tracking-tighter"><span class="text-sm mr-0.5">RM</span>${item.loudspeaker}</span>` : '<span class="text-slate-300 font-medium">-</span>'}
+                    </div>`;
                 container.appendChild(row);
             });
         }
 
-        function filterData(query) {
-            const filtered = PRICING_DATA.filter(item => 
-                item.model.toLowerCase().includes(query.toLowerCase())
-            );
-            renderRows(filtered);
-        }
-
-        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             renderRows(PRICING_DATA);
             lucide.createIcons();
-            
-            const searchInput = document.getElementById('searchInput');
-            searchInput.addEventListener('input', (e) => {
-                filterData(e.target.value);
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                const filtered = PRICING_DATA.filter(item => item.model.toLowerCase().includes(e.target.value.toLowerCase()));
+                renderRows(filtered);
             });
         });
-    const backToTop = document.getElementById('back-to-top');
-
-    window.addEventListener('scroll', () => {
-        // If user scrolls down more than 300px, show the button
-        if (window.scrollY > 300) {
-            backToTop.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-            backToTop.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
-        } else {
-            // If they are at the top, hide it again
-            backToTop.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-            backToTop.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-        }
-    });
     </script>
 </body>
 </html>
