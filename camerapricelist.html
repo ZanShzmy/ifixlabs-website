@@ -98,26 +98,17 @@
 
         <!-- Search & Stats -->
 
-        <div class="max-w-xl mx-auto">
-            <div class="relative group">
-                <i data-lucide="search" class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-brand-purple transition-colors"></i>
-                <input 
-                  type="text" 
-                  id="searchInput"
-                  placeholder="Search model (e.g. 13 PRO MAX)..." 
-                  class="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-purple/10 focus:border-brand-purple transition-all shadow-sm font-medium"
-                />
-            </div>
-        </div>
-
-              <div class="flex items-center gap-6 text-sm text-brand-slate-500 font-semibold whitespace-nowrap overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
-                <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-sm border border-brand-slate-100 italic">
-                  <i data-lucide="clock" class="w-4 h-4 text-orange-500"></i>
-                  1 Hour Fix
-                </div>
-              </div>
-           </div>
-        </div>
+        <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
+          <div class="relative w-full sm:max-w-md group">
+            <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-slate-400 group-focus-within:text-brand-purple transition-colors"></i>
+            <input type="text" id="searchInput" placeholder="Search iPhone model..." 
+              class="w-full pl-12 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-purple-500/10 focus:border-brand-purple transition-all shadow-sm font-medium" />
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-sm border border-brand-slate-100 italic text-sm text-brand-slate-500 font-semibold">
+              <i data-lucide="clock" class="w-4 h-4 text-orange-500"></i>
+              1 Hour Fix
+          </div>
+       </div>
 
         
         <!-- Gap -->
