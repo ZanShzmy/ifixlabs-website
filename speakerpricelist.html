@@ -78,8 +78,8 @@
                 <i data-lucide="shield-check" class="w-3 h-3"></i>
                 Professional Grade Repair
             </div>
-            <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-black tracking-tighter leading-[0.85]">
-                Speaker Repair <br />
+           <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-black tracking-tighter leading-[0.85]">
+                    Speaker Repair <br />
                 <span class="text-brand-purple">Price List</span>
             </h2>
             <p class="mt-8 text-brand-slate-500 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
@@ -174,39 +174,119 @@
             { model: "iPhone 16 Pro Max", earspeaker: 180, loudspeaker: 185, notable: true },
             { model: "iPhone 16e", earspeaker: 180, loudspeaker: 190, notable: true },
             { model: "iPhone 17", earspeaker: null, loudspeaker: null, notable: true },
-            { model: "iPhone 17 pro", earspeaker: 195, loudspeaker: null, notable: true },
-            { model: "iPhone 17 pro max", earspeaker: 195, loudspeaker: null, notable: true },
-            { model: "iPhone 17 air", earspeaker: 200, loudspeaker: null, notable: true }
+            { model: "iPhone 17 Pro", earspeaker: 195, loudspeaker: null, notable: true },
+            { model: "iPhone 17 Pro Max", earspeaker: 195, loudspeaker: null, notable: true },
+            { model: "iPhone 17 Air", earspeaker: 200, loudspeaker: null, notable: true },
         ];
-
+    
         function renderRows(data) {
             const container = document.getElementById('priceTableBody');
             const emptyState = document.getElementById('emptyState');
+    
             container.innerHTML = '';
-            if (data.length === 0) { emptyState.classList.remove('hidden'); return; } else { emptyState.classList.add('hidden'); }
-
+    
+            if (data.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+    
             data.forEach((item) => {
                 const row = document.createElement('div');
-                row.className = `grid grid-cols-12 py-5 px-6 sm:px-8 items-center transition-colors ${item.notable ? 'bg-purple-50/30' : 'hover:bg-slate-50'}`;
+    
+                row.className = `
+                    grid grid-cols-12 py-5 px-6 sm:px-8 items-center
+                    cursor-default transition-colors
+                    ${item.notable ? 'bg-purple-50/30' : 'hover:bg-slate-50'}
+                `;
+    
                 row.innerHTML = `
-                    <div class="col-span-6 sm:col-span-5 font-bold text-brand-slate-800 sm:text-lg tracking-tight">${item.model}</div>
-                    <div class="col-span-3 sm:col-span-3 text-center sm:text-left pl-4 font-mono text-brand-purple flex items-center justify-center sm:justify-start">
-                        ${item.earspeaker ? `<span class="text-lg font-bold tracking-tighter"><span class="text-sm mr-0.5">RM</span>${item.earspeaker}</span>` : '<span class="text-slate-300 font-medium">-</span>'}
+                    <div class="col-span-6 sm:col-span-5 flex items-center gap-3">
+                        <span class="font-bold text-slate-800 sm:text-lg tracking-tight">
+                            ${item.model}
+                        </span>
+    
+                        ${item.notable ? `
+                            <span class="hidden sm:inline-block px-1.5 py-0.5 bg-green-100 text-green-700 text-[9px] font-black uppercase rounded tracking-tighter">
+                                Latest
+                            </span>
+                        ` : ''}
                     </div>
-                    <div class="col-span-3 sm:col-span-4 text-center sm:text-left pl-4 font-mono text-brand-green flex items-center justify-center sm:justify-start">
-                        ${item.loudspeaker ? `<span class="text-lg font-bold tracking-tighter"><span class="text-sm mr-0.5">RM</span>${item.loudspeaker}</span>` : '<span class="text-slate-300 font-medium">-</span>'}
-                    </div>`;
+    
+                    <div class="col-span-3 sm:col-span-3 text-center sm:text-left pl-4 font-mono text-brand-purple">
+                        ${item.earspeaker ? `
+                            <span class="text-lg font-bold tracking-tighter">
+                                <span class="text-sm mr-0.5">RM</span>${item.earspeaker}
+                            </span>
+                        ` : `
+                            <span class="text-slate-300 font-medium">-</span>
+                        `}
+                    </div>
+    
+                    <div class="col-span-3 sm:col-span-4 text-center sm:text-left pl-4 font-mono text-green-500">
+                        ${item.loudspeaker ? `
+                            <span class="text-lg font-bold tracking-tighter">
+                                <span class="text-sm mr-0.5">RM</span>${item.loudspeaker}
+                            </span>
+                        ` : `
+                            <span class="text-slate-300 font-medium">-</span>
+                        `}
+                    </div>
+                `;
+    
                 container.appendChild(row);
             });
         }
-
+    
+        function filterData(query) {
+            const filtered = PRICING_DATA.filter(item =>
+                item.model.toLowerCase().includes(query.toLowerCase())
+            );
+    
+            renderRows(filtered);
+        }
+    
         document.addEventListener('DOMContentLoaded', () => {
             renderRows(PRICING_DATA);
+    
             lucide.createIcons();
-            document.getElementById('searchInput').addEventListener('input', (e) => {
-                const filtered = PRICING_DATA.filter(item => item.model.toLowerCase().includes(e.target.value.toLowerCase()));
-                renderRows(filtered);
+    
+            const searchInput = document.getElementById('searchInput');
+    
+            searchInput.addEventListener('input', (e) => {
+                filterData(e.target.value);
             });
+        });
+    
+        const backToTop = document.getElementById('back-to-top');
+    
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove(
+                    'opacity-0',
+                    'pointer-events-none',
+                    'translate-y-4'
+                );
+    
+                backToTop.classList.add(
+                    'opacity-100',
+                    'pointer-events-auto',
+                    'translate-y-0'
+                );
+            } else {
+                backToTop.classList.add(
+                    'opacity-0',
+                    'pointer-events-none',
+                    'translate-y-4'
+                );
+    
+                backToTop.classList.remove(
+                    'opacity-100',
+                    'pointer-events-auto',
+                    'translate-y-0'
+                );
+            }
         });
     </script>
 </body>
