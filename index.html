@@ -309,123 +309,128 @@
                     <!-- Booking Engine -->
                     <section id="booking-section" class="py-12">
                         
-    <div id="diagnostic-engine" class="bg-brand-black rounded-[40px] shadow-[0_32px_64px_rgba(0,0,0,0.6)] overflow-hidden w-full max-w-4xl mx-auto border border-white/5">
-    <div id="diagnostic-engine" class="bg-brand-black rounded-[40px] shadow-[0_32px_64px_rgba(0,0,0,0.6)] overflow-hidden w-full max-w-5xl mx-auto border border-white/5">
-        
-        <div class="p-6 sm:p-8 border-b border-white/5 flex items-center justify-between">
-            <div class="flex items-center gap-3 sm:gap-4">
-                <div class="bg-brand-purple p-2.5 sm:p-3 rounded-2xl shadow-[0_0_20px_rgba(124,93,250,0.4)]">
-                    <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 text-white"></i>
-                </div>
-                <div class="text-left">
-                    <h3 class="font-display font-black text-white text-base sm:text-lg tracking-tight uppercase">Appointment</h3>
-                    <p class="text-[8px] sm:text-[9px] text-gray-500 uppercase tracking-[0.3em] font-black italic">Booking</p>
-                </div>
-            </div>
-            <div class="flex gap-1.5 sm:gap-2">
-                <div id="indicator-1" class="h-1 sm:h-1.5 w-4 sm:w-6 rounded-full transition-all duration-300 bg-brand-purple"></div>
-                <div id="indicator-2" class="h-1 sm:h-1.5 w-4 sm:w-6 rounded-full transition-all duration-300 bg-white/5"></div>
-                <div id="indicator-3" class="h-1 sm:h-1.5 w-4 sm:w-6 rounded-full transition-all duration-300 bg-white/5"></div>
-            </div>
-        </div>
-
-        <div class="p-6 sm:p-10 min-h-[450px] relative text-left">
-            
-            <div id="step-1" class="step-content active flex-col space-y-6 sm:space-y-8">
-                <div class="space-y-2 sm:space-y-3 text-center sm:text-left">
-                    <span class="text-[9px] sm:text-[10px] font-black text-brand-purple uppercase tracking-[0.2em] block">Step 01: Hardware Info</span>
-                    <h4 class="text-2xl sm:text-3xl font-black text-white font-display tracking-tight leading-none uppercase">Which device?</h4>
-                </div>
-                <div class="relative group">
-                    <i data-lucide="smartphone" class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-600 group-focus-within:text-brand-purple transition-colors w-4 h-4 sm:w-5 sm:h-5"></i>
-                    <input type="text" id="input-device" placeholder="e.g. iPhone 15, Laptop" class="w-full bg-white/5 border-2 border-transparent focus:border-brand-purple focus:bg-white/10 p-4 sm:p-5 pL-12 sm:pl-14 rounded-2xl outline-none transition-all text-white font-bold placeholder:text-gray-700 text-sm sm:text-base">
-                </div>
-                <button onclick="goToStep(2)" id="btn-next-1" class="w-full bg-brand-purple hover:bg-white text-white hover:text-brand-black p-4 sm:p-5 rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed">
-                    Next Step <i data-lucide="send" class="w-3 h-3 sm:w-4 sm:h-4"></i>
-                </button>
-            </div>
-
-            <div id="step-2" class="step-content flex-col space-y-6 sm:space-y-8">
-                <div class="space-y-2 sm:space-y-3 text-center sm:text-left">
-                    <span class="text-[9px] sm:text-[10px] font-black text-brand-purple uppercase tracking-[0.2em] block">Step 02: Symptom Report</span>
-                    <h4 class="text-2xl sm:text-3xl font-black text-white font-display tracking-tight leading-none uppercase text-left">What's the issue?</h4>
-                </div>
-                <textarea id="input-issue" rows="4" placeholder="Explain the problem..." class="w-full bg-white/5 border-2 border-transparent focus:border-brand-purple focus:bg-white/10 p-4 sm:p-5 rounded-2xl outline-none transition-all text-white font-bold placeholder:text-gray-700 resize-none text-sm sm:text-base"></textarea>
-                <div class="space-y-2">
-                    <span class="text-[9px] sm:text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] block text-left">Your phone number</span>
-                    <input type="tel" id="input-whatsapp" placeholder="01XXXXXXXX" class="w-full bg-white/5 border-2 border-transparent focus:border-brand-purple focus:bg-white/10 p-4 sm:p-5 rounded-2xl outline-none transition-all text-white font-bold placeholder:text-gray-700 text-sm sm:text-base">
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <button onclick="goToStep(1)" class="bg-white/5 hover:bg-white/10 text-gray-400 p-4 sm:p-5 rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs transition-colors">Back</button>
-                    <button onclick="goToStep(3)" id="btn-next-2" class="bg-brand-purple hover:bg-white text-white hover:text-brand-black p-4 sm:p-5 rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95 disabled:opacity-50">Next Step</button>
-                </div>
-            </div>
-
-            <div id="step-3" class="step-content flex-col space-y-6">
-                <div class="space-y-2 sm:space-y-3 text-center sm:text-left">
-                    <span class="text-[10px] font-black text-brand-purple uppercase tracking-[0.2em] block">Step 03: Appointment Time</span>
-                    <h4 class="text-2xl sm:text-3xl font-black text-white font-display tracking-tight leading-none uppercase">Schedule Your Visit</h4>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between">
-                        <span class="text-[10px] font-black text-gray-500 uppercase tracking-widest">Select Date</span>
-                        <div class="flex items-center gap-4">
-                            <button onclick="changeMonth(-1)" class="p-1 hover:bg-white/10 rounded-lg transition-colors">
-                                <i data-lucide="chevron-left" class="w-4 h-4 text-gray-400"></i>
-                            </button>
-                            <span id="calendar-month-year" class="text-[10px] font-black text-brand-purple uppercase tracking-tight min-w-[80px] text-center">Month Year</span>
-                            <button onclick="changeMonth(1)" class="p-1 hover:bg-white/10 rounded-lg transition-colors">
-                                <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-white/[0.03] rounded-3xl p-4 border border-white/5">
-                        <div class="grid grid-cols-7 gap-1 mb-2">
-                            <span class="text-[8px] font-black text-gray-600 text-center uppercase tracking-tighter">Sun</span>
-                            <span class="text-[8px] font-black text-gray-600 text-center uppercase tracking-tighter">Mon</span>
-                            <span class="text-[8px] font-black text-gray-600 text-center uppercase tracking-tighter">Tue</span>
-                            <span class="text-[8px] font-black text-gray-600 text-center uppercase tracking-tighter">Wed</span>
-                            <span class="text-[8px] font-black text-gray-600 text-center uppercase tracking-tighter">Thu</span>
-                            <span class="text-[8px] font-black text-gray-600 text-center uppercase tracking-tighter">Fri</span>
-                            <span class="text-[8px] font-black text-gray-600 text-center uppercase tracking-tighter">Sat</span>
-                        </div>
-                        <div id="calendar-grid" class="grid grid-cols-7 gap-1">
+    <div class="w-full max-w-sm sm:max-w-xl md:max-w-4xl mx-auto bg-brand-black rounded-[40px] shadow-[0_32px_64px_rgba(0,0,0,0.4)] overflow-hidden border border-white/5 text-left" id="booking-engine-wrapper">
+                        
+                        <div class="p-6 sm:p-8 border-b border-white/5 flex items-center justify-between">
+                            <div class="flex items-center gap-3 sm:gap-4">
+                                <div class="bg-brand-purple p-2.5 sm:p-3 rounded-2xl shadow-[0_0_20px_rgba(124,93,250,0.3)]">
+                                    <i data-lucide="calendar" class="w-4 h-4 sm:w-5 sm:h-5 text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-black text-white text-base sm:text-lg tracking-tight uppercase">Appointment Booking</h3>
+                                    <p class="text-[8px] sm:text-[9px] text-gray-500 uppercase tracking-[0.3em] font-black italic">iFixLabs v1.0</p>
+                                </div>
                             </div>
-                    </div>
-                </div>
-
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between">
-                        <span class="text-[10px] font-black text-gray-500 uppercase tracking-widest">Select Time</span>
-                        <i data-lucide="clock" class="w-3 h-3 text-gray-500"></i>
-                    </div>
-                    <div id="time-container" class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+                            <div class="flex gap-1.5 sm:gap-2">
+                                <div id="book-indicator-1" class="h-1 sm:h-1.5 w-4 sm:w-6 rounded-full transition-all duration-300 bg-brand-purple"></div>
+                                <div id="book-indicator-2" class="h-1 sm:h-1.5 w-4 sm:w-6 rounded-full transition-all duration-300 bg-white/5"></div>
+                                <div id="book-indicator-3" class="h-1 sm:h-1.5 w-4 sm:w-6 rounded-full transition-all duration-300 bg-white/5"></div>
+                            </div>
                         </div>
-                </div>
 
-                <div class="bg-white/[0.02] border border-white/5 rounded-3xl p-5 mt-2">
-                   <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-left">
-                      <div id="selection-summary" class="flex items-center gap-4">
-                          <div class="bg-white/5 p-2 rounded-xl">
-                            <i data-lucide="calendar" class="w-5 h-5 text-gray-600"></i>
-                          </div>
-                          <p class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">Please select a slot</p>
-                      </div>
-                      
-                      <div class="flex gap-3 w-full sm:w-auto">
-                        <button onclick="goToStep(2)" class="bg-white/5 hover:bg-white/10 text-gray-400 p-4 rounded-xl font-black uppercase tracking-widest text-[10px] transition-colors">Back</button>
-                        <button onclick="handleBooking()" id="btn-confirm" disabled class="flex-1 sm:flex-none bg-brand-purple hover:bg-white text-white hover:text-brand-black disabled:opacity-50 p-4 rounded-xl font-black uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95"> Confirm & Book </button>
-                      </div>
-                   </div>
-                </div>
+                        <div class="p-6 sm:p-10 min-h-[450px] flex flex-col justify-center relative">
+                            
+                            <div id="book-step-1" class="booking-step active flex-col space-y-6 sm:space-y-8 w-full">
+                                <div class="space-y-2 sm:space-y-3">
+                                    <span class="text-[9px] sm:text-[10px] font-black text-brand-purple uppercase tracking-[0.2em] block">Step 01: Hardware Info</span>
+                                    <h4 class="text-2xl sm:text-3xl font-black text-white font-display tracking-tight leading-none uppercase">Which device?</h4>
+                                </div>
+                                <div class="relative group">
+                                    <i data-lucide="smartphone" class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-600 group-focus-within:text-brand-purple transition-colors w-4 h-4 sm:w-5 sm:h-5"></i>
+                                    <input type="text" id="bk-device" placeholder="e.g. iPhone 15, Laptop" class="w-full bg-white/5 border-2 border-transparent focus:border-brand-purple focus:bg-white/10 p-4 sm:p-5 pl-12 sm:pl-14 rounded-2xl outline-none transition-all text-white font-bold placeholder:text-gray-700 text-sm sm:text-base">
+                                </div>
+                                <button onclick="toBookingStep(2)" id="bk-btn-next-1" disabled class="w-full bg-brand-purple hover:bg-white text-white hover:text-brand-black p-4 sm:p-5 rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed">
+                                    Next Step <i data-lucide="send" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+                                </button>
+                            </div>
 
-                <button onclick="resetEngine()" class="text-gray-600 hover:text-white text-[9px] font-black uppercase tracking-widest flex items-center justify-center gap-2 mt-2 transition-colors">
-                    <i data-lucide="refresh-ccw" class="w-3 h-3"></i> Start Over
-                </button>
-            </div>
-        </div>
-    </div>
+                            <div id="book-step-2" class="booking-step flex-col space-y-6 sm:space-y-8 w-full">
+                                <div class="space-y-2 sm:space-y-3">
+                                    <span class="text-[9px] sm:text-[10px] font-black text-brand-purple uppercase tracking-[0.2em] block">Step 02: Symptom Report</span>
+                                    <h4 class="text-2xl sm:text-3xl font-black text-white font-display tracking-tight leading-none uppercase">What's the issue?</h4>
+                                </div>
+                                <textarea id="bk-issue" rows="4" placeholder="Explain the problem..." class="w-full bg-white/5 border-2 border-transparent focus:border-brand-purple focus:bg-white/10 p-4 sm:p-5 rounded-2xl outline-none transition-all text-white font-bold placeholder:text-gray-700 resize-none text-sm sm:text-base"></textarea>
+                                <div class="space-y-2">
+                                    <span class="text-[9px] sm:text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] block">Your Phone Number</span>
+                                    <input type="tel" id="bk-whatsapp" placeholder="01XXXXXXXX" class="w-full bg-white/5 border-2 border-transparent focus:border-brand-purple focus:bg-white/10 p-4 sm:p-5 rounded-2xl outline-none transition-all text-white font-bold placeholder:text-gray-700 text-sm sm:text-base">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <button onclick="toBookingStep(1)" class="bg-white/5 hover:bg-white/10 text-gray-400 p-4 sm:p-5 rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs transition-colors">Back</button>
+                                    <button onclick="toBookingStep(3)" id="bk-btn-next-2" disabled class="bg-brand-purple hover:bg-white text-white hover:text-brand-black p-4 sm:p-5 rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95 disabled:opacity-40">Next Step</button>
+                                </div>
+                            </div>
+
+                            <div id="book-step-3" class="booking-step flex-col space-y-6 w-full">
+                                <div class="space-y-1">
+                                    <span class="text-[9px] sm:text-[10px] font-black text-brand-purple uppercase tracking-[0.2em] block">Step 03: Appointment Booking</span>
+                                    <h4 class="text-2xl sm:text-3xl font-black text-white font-display tracking-tight leading-none uppercase">Schedule Your Visit</h4>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-start">
+                                    
+                                    <div class="space-y-3 w-full">
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-[9px] font-black text-gray-500 uppercase tracking-widest">Select Date</span>
+                                            <div class="flex items-center gap-3">
+                                                <button onclick="adjustBookingMonth(-1)" class="p-1 hover:bg-white/10 rounded-lg transition-colors">
+                                                    <i data-lucide="chevron-left" class="w-3.5 h-3.5 text-gray-400"></i>
+                                                </button>
+                                                <span id="bk-month-year-label" class="text-[9px] font-black text-brand-purple uppercase tracking-tight min-w-[75px] text-center">Month Year</span>
+                                                <button onclick="adjustBookingMonth(1)" class="p-1 hover:bg-white/10 rounded-lg transition-colors">
+                                                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-400"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white/[0.03] rounded-2xl p-3 border border-white/5 w-full">
+                                            <div class="grid grid-cols-7 gap-1 mb-1.5 text-center">
+                                                <span class="text-[8px] font-black text-gray-600 uppercase tracking-tighter">Sun</span>
+                                                <span class="text-[8px] font-black text-gray-600 uppercase tracking-tighter">Mon</span>
+                                                <span class="text-[8px] font-black text-gray-600 uppercase tracking-tighter">Tue</span>
+                                                <span class="text-[8px] font-black text-gray-600 uppercase tracking-tighter">Wed</span>
+                                                <span class="text-[8px] font-black text-gray-600 uppercase tracking-tighter">Thu</span>
+                                                <span class="text-[8px] font-black text-gray-600 uppercase tracking-tighter">Fri</span>
+                                                <span class="text-[8px] font-black text-gray-600 uppercase tracking-tighter">Sat</span>
+                                            </div>
+                                            <div id="bk-calendar-grid" class="grid grid-cols-7 gap-1">
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-3 w-full">
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-[9px] font-black text-gray-500 uppercase tracking-widest">Select Time</span>
+                                            <i data-lucide="clock" class="w-3.5 h-3.5 text-gray-500"></i>
+                                        </div>
+                                        <div id="bk-time-container" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-2 w-full">
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white/[0.02] border border-white/5 rounded-2xl p-4 sm:p-5 mt-2 w-full">
+                                   <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                                      <div id="bk-selection-summary" class="w-full sm:w-auto">
+                                          <div class="flex items-center gap-3">
+                                            <div class="bg-white/5 p-2 rounded-xl">
+                                                <i data-lucide="calendar-range" class="w-4 h-4 text-gray-600"></i>
+                                            </div>
+                                            <p class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">Please select a slot</p>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="flex gap-3 w-full sm:w-auto justify-end">
+                                        <button onclick="toBookingStep(2)" class="bg-white/5 hover:bg-white/10 text-gray-400 px-4 py-3.5 rounded-xl font-black uppercase tracking-widest text-[10px] transition-colors">Back</button>
+                                        <button onclick="executeBookingSubmit()" id="bk-btn-confirm" disabled class="flex-1 sm:flex-none bg-brand-purple hover:bg-white text-white hover:text-brand-black disabled:opacity-40 px-5 py-3.5 rounded-xl font-black uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 transition-all shadow-lg active:scale-95"> Confirm & Book </button>
+                                      </div>
+                                   </div>
+                                </div>
+
+                                <button onclick="resetBookingEngine()" class="text-gray-600 hover:text-white text-[9px] font-black uppercase tracking-widest flex items-center justify-center gap-2 mx-auto mt-2 transition-colors">
+                                    <i data-lucide="refresh-ccw" class="w-3 h-3"></i> Start Over
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
 </section>
  
                             <!-- Loading Overly -->
@@ -681,184 +686,168 @@
  
         // Booking Engine Logic
 
-const bookingState = {
-    step: 1,
-    device: '',
-    issue: '',
-    whatsapp: '',
-    date: '',
-    time: '',
-    viewDate: new Date()
-};
-
-const bookingTimeSlots = [
-    '10:00 AM', '11:00 AM', '12:00 PM', '01:00 PM', 
-    '02:00 PM', '03:00 PM', '04:00 PM', '05:00 PM', 
-    '06:00 PM', '07:00 PM'
-];
-
-function goToStep(next) {
-    const currentEl = document.getElementById(`step-${bookingState.step}`);
-    const nextEl = document.getElementById(`step-${next}`);
-    const indicators = [1, 2, 3];
-
-    bookingState.step = next;
-
-    document.querySelectorAll('.step-content').forEach(el => el.classList.remove('active'));
-    nextEl.classList.add('active');
-
-    indicators.forEach(i => {
-        const el = document.getElementById(`indicator-${i}`);
-        if (i <= next) {
-            el.classList.add('bg-brand-purple');
-            el.classList.remove('bg-white/5');
-        } else {
-            el.classList.remove('bg-brand-purple');
-            el.classList.add('bg-white/5');
-        }
-    });
-
-    validateBookingForm();
-}
-
-function validateBookingForm() {
-    const btn1 = document.getElementById('btn-next-1');
-    const btn2 = document.getElementById('btn-next-2');
-    const btnConfirm = document.getElementById('btn-confirm');
-
-    if(btn1) btn1.disabled = !bookingState.device;
-    if(btn2) btn2.disabled = !bookingState.issue || !bookingState.whatsapp;
-    if(btnConfirm) btnConfirm.disabled = !bookingState.date || !bookingState.time;
-
-    updateBookingSummary();
-}
-
-function renderBookingCalendar() {
-    const grid = document.getElementById('calendar-grid');
-    const label = document.getElementById('calendar-month-year');
-    if(!grid || !label) return;
-    grid.innerHTML = '';
-    
-    const year = bookingState.viewDate.getFullYear();
-    const month = bookingState.viewDate.getMonth();
-    
-    label.innerText = bookingState.viewDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const today = new Date();
-    today.setHours(0,0,0,0);
-
-    for (let i = 0; i < firstDay; i++) {
-        const slot = document.createElement('div');
-        grid.appendChild(slot);
-    }
-
-    for (let day = 1; day <= daysInMonth; day++) {
-        const dateObj = new Date(year, month, day);
-        const dateStr = dateObj.toDateString();
-        const isSelected = bookingState.date === dateStr;
-        const isPast = dateObj < today;
-        const isToday = dateObj.toDateString() === today.toDateString();
-
-        const btn = document.createElement('button');
-        btn.className = `p-2 aspect-square rounded-xl text-[10px] font-black transition-all border-2 flex items-center justify-center ${
-            isSelected ? 'selected' : 
-            isPast ? 'text-gray-800 cursor-not-allowed border-transparent opacity-30' : 
-            isToday ? 'border-brand-purple text-brand-purple hover:bg-white/10' :
-            'bg-white/5 border-transparent text-white hover:bg-white/10'
-        }`;
-        btn.innerText = day;
-        
-        if (!isPast) {
-            btn.onclick = () => {
-                bookingState.date = bookingState.date === dateStr ? '' : dateStr;
-                renderBookingCalendar();
-                validateBookingForm();
-            };
-        }
-        grid.appendChild(btn);
-    }
-    if(window.lucide) lucide.createIcons();
-}
-
-function changeMonth(offset) {
-    bookingState.viewDate.setMonth(bookingState.viewDate.getMonth() + offset);
-    renderBookingCalendar();
-}
-
-function renderBookingTimes() {
-    const container = document.getElementById('time-container');
-    if(!container) return;
-    container.innerHTML = '';
-    
-    bookingTimeSlots.forEach(time => {
-        const isSelected = bookingState.time === time;
-        const btn = document.createElement('button');
-        btn.className = `time-btn p-3 rounded-xl border-2 text-[10px] font-black tracking-tight transition-all ${isSelected ? 'selected' : 'bg-white/5 border-transparent text-gray-400 hover:bg-white/10 hover:text-white'}`;
-        btn.innerText = time;
-        btn.onclick = () => {
-            bookingState.time = bookingState.time === time ? '' : time;
-            renderBookingTimes();
-            validateBookingForm();
+const bkState = {
+            step: 1,
+            device: '',
+            issue: '',
+            whatsapp: '',
+            date: '',
+            time: '',
+            viewDate: new Date()
         };
-        container.appendChild(btn);
-    });
-}
 
-function updateBookingSummary() {
-    const summary = document.getElementById('selection-summary');
-    if(!summary) return;
-    if (bookingState.date && bookingState.time) {
-        const d = new Date(bookingState.date);
-        summary.innerHTML = `
-            <div class="flex items-center gap-4">
-                <div class="bg-green-500/10 p-2 rounded-xl">
-                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
-                </div>
-                <div>
-                    <p class="text-[9px] font-black text-gray-500 uppercase tracking-widest leading-none">Selected slot</p>
-                    <p class="text-sm font-black text-white mt-1 uppercase tracking-tight">
-                        ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} @ ${bookingState.time}
-                    </p>
-                </div>
-            </div>
-        `;
-    } else {
-        summary.innerHTML = `
-            <div class="flex items-center gap-4">
-                <div class="bg-white/5 p-2 rounded-xl">
-                    <i data-lucide="calendar" class="w-5 h-5 text-gray-600"></i>
-                </div>
-                <p class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">Please select a slot</p>
-            </div>
-        `;
-    }
-    if(window.lucide) lucide.createIcons();
-}
+        const bkTimeSlots = [
+            '10:00 AM', '11:00 AM', '12:00 PM', '01:00 PM', 
+            '02:00 PM', '03:00 PM', '04:00 PM', '05:00 PM', 
+            '06:00 PM', '07:00 PM'
+        ];
 
-function resetEngine() {
-    bookingState.step = 1;
-    bookingState.device = '';
-    bookingState.issue = '';
-    bookingState.whatsapp = '';
-    bookingState.date = '';
-    bookingState.time = '';
-    bookingState.viewDate = new Date();
-    
-    document.getElementById('input-device').value = '';
-    document.getElementById('input-issue').value = '';
-    document.getElementById('input-whatsapp').value = '';
-    
-    renderBookingCalendar();
-    renderBookingTimes();
-    goToStep(1);
-}
+        function toBookingStep(next) {
+            bkState.step = next;
+            document.querySelectorAll('.booking-step').forEach(el => el.classList.remove('active'));
+            document.getElementById(`book-step-${next}`).classList.add('active');
 
-function handleBooking() {
-    const message = `Hello iFixLabs! I want to book an appointment.\nDevice: ${bookingState.device}\nProblem: ${bookingState.issue}\nTime: ${bookingState.date} Hour ${bookingState.time}`;
-    window.open(`https://wa.me/60${bookingState.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
-}
+            [1, 2, 3].forEach(i => {
+                const el = document.getElementById(`book-indicator-${i}`);
+                if (i <= next) {
+                    el.className = "h-1 sm:h-1.5 w-4 sm:w-6 rounded-full transition-all duration-300 bg-brand-purple";
+                } else {
+                    el.className = "h-1 sm:h-1.5 w-4 sm:w-6 rounded-full transition-all duration-300 bg-white/5";
+                }
+            });
+            verifyBookingValidation();
+        }
+
+        function verifyBookingValidation() {
+            const b1 = document.getElementById('bk-btn-next-1');
+            const b2 = document.getElementById('bk-btn-next-2');
+            const bC = document.getElementById('bk-btn-confirm');
+
+            if(b1) b1.disabled = !bkState.device.trim();
+            if(b2) b2.disabled = !bkState.issue.trim() || !bkState.whatsapp.trim();
+            if(bC) bC.disabled = !bkState.date || !bkState.time;
+
+            renderBookingSummaryOutput();
+        }
+
+        function drawBookingCalendarGrid() {
+            const grid = document.getElementById('bk-calendar-grid');
+            const label = document.getElementById('bk-month-year-label');
+            if(!grid || !label) return;
+            grid.innerHTML = '';
+            
+            const yr = bkState.viewDate.getFullYear();
+            const mo = bkState.viewDate.getMonth();
+            label.innerText = bkState.viewDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+            const startOffset = new Date(yr, mo, 1).getDay();
+            const totalDays = new Date(yr, mo + 1, 0).getDate();
+            const currentBoundary = new Date();
+            currentBoundary.setHours(0,0,0,0);
+
+            for (let i = 0; i < startOffset; i++) {
+                grid.appendChild(document.createElement('div'));
+            }
+
+            for (let day = 1; day <= totalDays; day++) {
+                const dayObj = new Date(yr, mo, day);
+                const dayStr = dayObj.toDateString();
+                const matchedActive = bkState.date === dayStr;
+                const expired = dayObj < currentBoundary;
+                const matchesToday = dayObj.toDateString() === currentBoundary.toDateString();
+
+                const node = document.createElement('button');
+                node.className = `p-2 aspect-square rounded-xl text-[10px] font-black transition-all border-2 flex items-center justify-center ${
+                    matchedActive ? 'selected-slot' : 
+                    expired ? 'text-gray-800 border-transparent opacity-20 cursor-not-allowed' : 
+                    matchesToday ? 'border-brand-purple text-brand-purple bg-brand-purple/5 hover:bg-brand-purple/20' :
+                    'bg-white/5 border-transparent text-white hover:bg-white/10'
+                }`;
+                node.innerText = day;
+                
+                if (!expired) {
+                    node.onclick = () => {
+                        bkState.date = (bkState.date === dayStr) ? '' : dayStr;
+                        drawBookingCalendarGrid();
+                        verifyBookingValidation();
+                    };
+                }
+                grid.appendChild(node);
+            }
+            if(window.lucide) lucide.createIcons();
+        }
+
+        function adjustBookingMonth(direction) {
+            bkState.viewDate.setMonth(bkState.viewDate.getMonth() + direction);
+            drawBookingCalendarGrid();
+        }
+
+        function drawBookingTimeContainers() {
+            const wrap = document.getElementById('bk-time-container');
+            if(!wrap) return;
+            wrap.innerHTML = '';
+            
+            bkTimeSlots.forEach(slot => {
+                const isActive = bkState.time === slot;
+                const element = document.createElement('button');
+                element.className = `p-2.5 rounded-xl border text-[9px] font-black tracking-tight transition-all text-center ${
+                    isActive ? 'selected-slot' : 'bg-white/5 border-transparent text-gray-400 hover:bg-white/10 hover:text-white'
+                }`;
+                element.innerText = slot;
+                element.onclick = () => {
+                    bkState.time = (bkState.time === slot) ? '' : slot;
+                    drawBookingTimeContainers();
+                    verifyBookingValidation();
+                };
+                wrap.appendChild(element);
+            });
+        }
+
+        function renderBookingSummaryOutput() {
+            const out = document.getElementById('bk-selection-summary');
+            if(!out) return;
+
+            if (bkState.date && bkState.time) {
+                const calculatedDate = new Date(bkState.date);
+                out.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="bg-green-500/10 p-2 rounded-xl">
+                            <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                        </div>
+                        <div>
+                            <p class="text-[8px] font-black text-gray-500 uppercase tracking-widest leading-none">Slot Selected</p>
+                            <p class="text-xs font-black text-white mt-1 uppercase">
+                                ${calculatedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} @ ${bkState.time}
+                            </p>
+                        </div>
+                    </div>`;
+            } else {
+                out.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="bg-white/5 p-2 rounded-xl">
+                            <i data-lucide="calendar-range" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                        <p class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">Please select a slot</p>
+                    </div>`;
+            }
+            if(window.lucide) lucide.createIcons();
+        }
+
+        function resetBookingEngine() {
+            bkState.device = ''; bkState.issue = ''; bkState.whatsapp = ''; bkState.date = ''; bkState.time = '';
+            bkState.viewDate = new Date();
+            document.getElementById('bk-device').value = '';
+            document.getElementById('bk-issue').value = '';
+            document.getElementById('bk-whatsapp').value = '';
+            drawBookingCalendarGrid();
+            drawBookingTimeContainers();
+            toBookingStep(1);
+        }
+
+        function executeBookingSubmit() {
+            const txt = `Halo iFixLabs! Saya mau booking slot appointment.\n\n📱 Device: ${bkState.device}\n🛠️ Masalah: ${bkState.issue}\n📅 Tarikh: ${bkState.date}\n⏰ Waktu: ${bkState.time}`;
+            window.open(`https://wa.me/60${bkState.whatsapp}?text=${encodeURIComponent(txt)}`, '_blank');
+        }
 
 // MAKE SURE TO CALL THESE INITIALIZERS inside your existing DOMContentLoaded listener:
 document.addEventListener('DOMContentLoaded', () => {
@@ -875,6 +864,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('input-whatsapp').addEventListener('input', (e) => { bookingState.whatsapp = e.target.value; validateBookingForm(); });
     }
 });
+
+        // booking engine variables
+            const devIn = document.getElementById('bk-device');
+            const issIn = document.getElementById('bk-issue');
+            const whaIn = document.getElementById('bk-whatsapp');
+
+            if(devIn) {
+                devIn.addEventListener('input', (e) => { bkState.device = e.target.value; verifyBookingValidation(); });
+                issIn.addEventListener('input', (e) => { bkState.issue = e.target.value; verifyBookingValidation(); });
+                whaIn.addEventListener('input', (e) => { bkState.whatsapp = e.target.value; verifyBookingValidation(); });
+                
+                // Initialize Booking Interface Subroutines
+                drawBookingCalendarGrid();
+                drawBookingTimeContainers();
+                verifyBookingValidation();
+            }
          
         // Animation Triggers
         window.addEventListener('DOMContentLoaded', () => {
