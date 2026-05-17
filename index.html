@@ -60,7 +60,35 @@
             color: white !important;
             box-shadow: 0 10px 20px rgba(124,93,250,0.3) !important;
         }
-        
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .booking-step {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateX(20px);
+            display: none;
+        }
+
+        .booking-step.active {
+            display: flex;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .selected-slot {
+            background-color: #7C5DFA !important;
+            border-color: #7C5DFA !important;
+            color: white !important;
+            box-shadow: 0 10px 20px rgba(124,93,250,0.3) !important;
+        }
+    
     </style>
 </head>
 <body class="bg-white text-brand-black selection:bg-brand-purple selection:text-white">
