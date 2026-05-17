@@ -317,8 +317,8 @@
                                     <i data-lucide="calendar" class="w-4 h-4 sm:w-5 sm:h-5 text-white"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-display font-black text-white text-base sm:text-lg tracking-tight uppercase">Appointment Booking</h3>
-                                    <p class="text-[8px] sm:text-[9px] text-gray-500 uppercase tracking-[0.3em] font-black italic">iFixLabs v1.0</p>
+                                    <h3 class="font-display font-black text-white text-base sm:text-lg tracking-tight uppercase">Appointment </h3>
+                                    <p class="text-[8px] sm:text-[9px] text-gray-500 uppercase tracking-[0.3em] font-black italic">Booking tool</p>
                                 </div>
                             </div>
                             <div class="flex gap-1.5 sm:gap-2">
@@ -845,7 +845,7 @@ const bkState = {
         }
 
         function executeBookingSubmit() {
-            const txt = `Halo iFixLabs! Saya mau booking slot appointment.\n\n📱 Device: ${bkState.device}\n🛠️ Masalah: ${bkState.issue}\n📅 Tarikh: ${bkState.date}\n⏰ Waktu: ${bkState.time}`;
+            const txt = `Hello iFixLabs! I would like to make an appointment.\n\n📱 Device: ${bkState.device}\n🛠️ Masalah: ${bkState.issue}\n📅 Tarikh: ${bkState.date}\n⏰ Waktu: ${bkState.time}`;
             window.open(`https://wa.me/60176198047?text=${encodeURIComponent(txt)}`, '_blank');
         }
 
